@@ -1,0 +1,200 @@
+[
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a module named \"Anagram\" exporting the function \"anagramsFor\".\nOutput:\n",
+        "base_model": "module Anagram (anagramsFor) where\n\nincludes the necessary libraries for string manipulation and comparison.\nUses the'sort' function from the 'Data.List' module to sort the input string.\nDefines an auxiliary function 'aux' that takes the input string and a list of sorted strings as arguments.\nThe 'aux' function checks if the input string is equal to any of the sorted strings using the '==' operator and 'elem' function from 'Data.List'.\nIf the input string is not equal to any of the sorted strings, it returns False.\nOtherwise, it recursively processes the remaining characters in the input string by calling itself recursively with the same input string and the updated list of sorted strings.\n\nThe 'anagramsFor' function uses the'map' and 'filter' functions to map the 'aux' function over the input string using 'fmap' (from the 'Functor' typeclass) and 'elem' (from the 'Predicate'",
+        "peft_model_v1": "module Anagram (anagramsFor) where\n\nincludes the necessary libraries for string manipulation and comparison.\nUses the'sort' function from the 'Data.List' module to sort the input string.\nDefines an auxiliary function 'aux' that takes the input string and a list of sorted strings as arguments.\nThe 'aux' function checks if the input string is equal to any of the sorted strings using the '==' operator and 'elem' function from 'Data.List'.\nIf the input string is not equal to any of the sorted strings, it returns False.\nOtherwise, it recursively processes the remaining characters in the input string by calling itself recursively with the same input string and the updated list of sorted strings.\n\nThe 'anagramsFor' function uses the'map' and 'filter' functions to map the 'aux' function over each character in the input string, resulting in a list of Booleans indicating whether each character's anagram is an anagram of the input",
+        "peft_model_v2": "module Anagram (anagramsFor) where\n\nincludes the necessary libraries for string manipulation and comparison.\nUses the'sort' function from the 'Data.List' module to sort the input string.\nDefines an auxiliary function 'aux' that takes the input string and a list of sorted strings as arguments.\nThe 'aux' function checks if the input string is equal to any of the sorted strings using the '==' operator and 'elem' function from 'Data.List'.\nIf the input string is not equal to any of the sorted strings, it returns False.\nOtherwise, it recursively processes the remaining characters in the input string by calling itself recursively with the same input string and the updated list of sorted strings.\n\nThe 'anagramsFor' function uses the'map' and 'filter' functions to map the 'aux' function over the input string using 'fmap' (from the 'Functor' typeclass) and 'elem' (from the 'Predicate'"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImport the \"Data.List\" module for list manipulation functions. Import the \"Data.Char\" module for character manipulation functions.\nOutput:\n",
+        "base_model": "import Data.List (drop, insert, sort)\nimport Data.Char (isUpper)\n\nconverts a string to lowercase using the \"isUpper\" function, and then inserts the string \"a\" into the sorted list of uppercase characters obtained from the \"sort\" function.\n\n",
+        "peft_model_v1": "import Data.List (drop, insert, sort)\nimport Data.Char (isUpper)\n\nconverts a string to lowercase using the \"isUpper\" function, and then inserts the string \"a\" into the sorted list of uppercase characters obtained from the \"sort\" function.\n\n",
+        "peft_model_v2": "import Data.List (drop, insert, sort)\nimport Data.Char (isUpper)\n\nconverts a string to lowercase using the \"isUpper\" function, and then inserts the string \"a\" into the sorted list of uppercase characters obtained from the \"sort\" function.\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a function named \"lower\" converting all characters of a String to lowercase. Define the \"lower\" function using \"map\" and \"toLower\" for lowercase conversion.\nOutput:\n",
+        "base_model": "lower = map toLower\n\n",
+        "peft_model_v1": "lower = map toLower\n\n",
+        "peft_model_v2": "lower = map toLower\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a function named \"normalize\" to convert a String to lowercase and sort its characters. Define the \"normalize\" function using function composition with \"sort\" and \"lower\".\nOutput:\n",
+        "base_model": "normalize = sort. lower\n\n",
+        "peft_model_v1": "normalize = sort. lower\n\n",
+        "peft_model_v2": "normalize = sort. lower\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a function named \"anagram\" to check if two Strings are anagrams. Define the \"anagram\" function to compare lowercase versions and sorted versions of input Strings.\nOutput:\n",
+        "base_model": "anagram :: String -> String -> Bool\n\nanagram s1 s2 = lowercase s1 == sort (lowercase s2) && lowercase s2 == sort (lowercase s1)\n\n",
+        "peft_model_v1": "anagram :: String -> String -> Bool\n\nanagram s1 s2 = lowercase s1 == sort (lowercase s2) && lowercase s2 == sort (lowercase s1)\n\n",
+        "peft_model_v2": "anagram :: String -> String -> Bool\n\nanagram s1 s2 = lowercase s1 == sort (lowercase s2) && lowercase s2 == sort (lowercase s1)\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a function named \"anagramsFor\" to find anagrams of a String in a list of Strings. Define the \"anagramsFor\" function using \"filter\" to select anagrams from the input list based on the \"anagram\" function.\nOutput:\n",
+        "base_model": "anagramsFor :: String -> [String] -> [String]\n\nanagramsFor wordList = filter (anagram wordList)\n\nanagram :: String -> String -> Bool\n\n",
+        "peft_model_v1": "anagramsFor :: String -> [String] -> [String]\n\nanagramsFor wordList = filter (anagram wordList)\n\nanagram :: String -> String -> Bool\n\n",
+        "peft_model_v2": "anagramsFor :: String -> [String] -> [String]\n\nanagramsFor wordList = filter (anagram wordList)\n\nanagram :: String -> String -> Bool\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a module named Clock and export three functions: addDelta, fromHourMin, and toString.\nOutput:\n",
+        "base_model": "module Clock (\naddDelta, fromHourMin, toString\n) where\n\n",
+        "peft_model_v1": "module Clock (\naddDelta, fromHourMin, toString\n) where\n\n",
+        "peft_model_v2": "module Clock (\naddDelta, fromHourMin, toString\n) where\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImport the printf function from the Text.Printf module for string formatting.\nOutput:\n",
+        "base_model": "import Text.Printf\n\nconverts the given string to uppercase using the toUpper function from the Data.Char module, and then prints the result using printf.\n\n",
+        "peft_model_v1": "import Text.Printf\n\nconverts the given string to uppercase using the uppercase function and prints the result using printf.\n\n",
+        "peft_model_v2": "import Text.Printf\n\nconverts the given string to uppercase using the uppercase function and prints the result using printf.\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a data type named Clock with a single field dayMins of type Int, indicating the number of minutes since midnight. Make sure to automatically generate equality comparisons for Clock instances.\nOutput:\n",
+        "base_model": "data Clock = Clock Int (Equal Clock)\n\n",
+        "peft_model_v1": "data Clock = Clock Int (Equal Clock)\n\n",
+        "peft_model_v2": "data Clock = Clock Int (Equal Clock)\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a function that takes hours and minutes as arguments and returns a Clock object representing that time. Calculate the total minutes since midnight and ensure the time wraps around if it exceeds a day.\nOutput:\n",
+        "base_model": "import Data.Time.Clock\n\ngetHours :: Clock -> Int\n\ngetHours clock = hour + minute' / 60\n\nwhere hour = clockHours clock\n      minute' = clockMinutes clock\n\nand the'minute' function:\n\nminute :: Clock -> Int\n\nminute clock = (hour clock) * 60 + minute'\n\nwhere hour is obtained using the 'getHours' function, and'minute' calculates the remaining minutes using the remaining seconds 'clockMinutes clock'.\n\nIf the input clock time is within the range of valid times, return the current time. Otherwise, return the time subtracted by the minimum valid time.\n\n",
+        "peft_model_v1": "import Data.Time.Clock\n\ngetHours :: Clock -> Int\n\ngetHours clock = hour + minute' / 60\n\nwhere hour = clockHours clock\n      minute' = clockMinutes clock\n\nand the'minute' function:\n\nminute :: Clock -> Int\n\nminute clock = (hour clock) * 60 + minute'\n\nwhere hour is obtained using the 'getHours' function, and'minute' calculates the remaining minutes using the remaining seconds 'clockMinutes clock'.\n\nIf the input clock time is within the range of valid times, return the current time. Otherwise, return the time subtracted by the minimum valid time.\n\n",
+        "peft_model_v2": "import Data.Time.Clock\n\ngetHours :: Clock -> Int\n\ngetHours clock = hour + minute' / 60\n\nwhere hour = clockHours clock\n      minute' = clockMinutes clock\n\nand the'minute' function:\n\nminute :: Clock -> Int\n\nminute clock = (hour clock) * 60 + minute'\n\nwhere hour is obtained using the 'getHours' function, and'minute' calculates the remaining minutes using the remaining seconds 'clockMinutes clock'.\n\nIf the input clock time is within the range of valid times, return the current time. Otherwise, return the time subtracted by the minimum valid time.\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a function that takes a Clock object and returns a formatted string representing the time in the format \"HH:MM\". Extract the dayMins field and format it using printf, padding the hour and minute components with zeros if necessary.\nOutput:\n",
+        "base_model": "getTimeString clock = printf \"%02d:%02d\" (dayMins clock)\n\n",
+        "peft_model_v1": "getTimeString clock = printf \"%02d:%02d\" (dayMins clock)\n\n",
+        "peft_model_v2": "getTimeString clock = printf \"%02d:%02d\" (dayMins clock)\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a function that takes hours, minutes, and a Clock object as arguments. Return a new Clock object representing the time after adding the specified delta. Add the delta to the current number of minutes since midnight, handle wrapping around if necessary, and construct a new Clock object with the updated time.\nOutput:\n",
+        "base_model": "adjustClock :: Clock -> Int -> Clock\n\nIf the current time is (Hours h) and the delta is positive, add the delta to the number of minutes.\nIf the current time is (Hours h) and the delta is negative, subtract the absolute value of delta from the number of minutes.\nIf the current time is (Hours h m) and the delta is zero, do nothing.\n\nIf the current time is (Hours h m), add the delta to the number of minutes.\n\nIf the current time is (Hours h m), check if the number of minutes is greater than 10. If it is, increment the number of hours by 1 and set the number of minutes to 0.\n\nIf the current time is (Hours h m",
+        "peft_model_v1": "adjustClock :: Clock -> Int -> Clock\n\nIf the current time is (Hours h) and the delta is positive, add the delta to the number of minutes.\nIf the current time is (Hours h) and the delta is negative, subtract the absolute value of delta from the number of minutes.\nIf the current time is (Hours h m) and the delta is zero, do nothing.\n\nIf the current time is (Hours h m), add the delta to the number of minutes.\n\nIf the current time is (Hours h m), check if the number of minutes is greater than 10. If it is, increment the number of hours by 1 and set the number of minutes to 0. If it is not, leave the current time unchanged.",
+        "peft_model_v2": "adjustClock :: Clock -> Int -> Clock\n\nIf the current time is (Hours h) and the delta is positive, add the delta to the number of minutes.\nIf the current time is (Hours h) and the delta is negative, subtract the absolute value of delta from the number of minutes.\nIf the current time is (Hours h m) and the delta is zero, do nothing.\n\nIf the current time is (Hours h m), add the delta to the number of minutes.\n\nIf the current time is (Hours h m), check if the number of minutes is greater than 10. If it is, increment the number of hours by 1 and set the number of minutes to 0.\n\nIf the current time is (Hours h m"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a module named \"Hamming\". Export only the distance function from the module.\nOutput:\n",
+        "base_model": "module Hamming (distance) where\n\ndistance :: [Int] -> [Int] -> Int\n\nInclude the following import statement in the module definition.\nimports\n\nEnd of module declaration.\n\n",
+        "peft_model_v1": "module Hamming (distance) where\n\ndistance :: [Int] -> [Int] -> Int\n\nInclude the following import statement in the module definition.\nimports\n\nEnd of module declaration.\n\n",
+        "peft_model_v2": "module Hamming (distance) where\n\ndistance :: [Int] -> [Int] -> Int\n\nInclude the following import statement in the module definition.\nimports\n\nEnd of module declaration.\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine the type signature of the distance function as taking two strings as input and returning a Maybe Int.\nOutput:\n",
+        "base_model": "distance :: String -> String -> Maybe Int\n\n",
+        "peft_model_v1": "distance :: String -> String -> Maybe Int\n\n",
+        "peft_model_v2": "distance :: String -> String -> Maybe Int\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImplement the distance function to: Check if the lengths of the input strings are equal. If not, return Nothing. If equal, calculate the Hamming distance between the strings: Pair each character of the strings. Filter the pairs to keep only those with differing characters. Count the number of differing characters to get the Hamming distance. Wrap the distance in a Just constructor and return it.\nOutput:\n",
+        "base_model": "distance s1 s2 = case (length s1, length s2) of\n (n1, n2) -> if n1 /= n2 then Just n ->\n\n",
+        "peft_model_v1": "distance s1 s2 = case (length s1, length s2) of\n (n1, n2) -> if n1 /= n2 then Just n ->\n\n",
+        "peft_model_v2": "distance s1 s2 = case (length s1, length s2) of\n (n1, n2) -> if n1 /= n2 then Just n ->\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare a module named Luhn and export the function isValid.\nOutput:\n",
+        "base_model": "module Luhn (isValid) where\n\n",
+        "peft_model_v1": "module Luhn (isValid) where\n\n",
+        "peft_model_v2": "module Luhn (isValid) where\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImport the Data.Char module for character and string manipulation functions.\nOutput:\n",
+        "base_model": "import Data.Char\n\nconverts a character to its ASCII code, returns an Int.\n\nExample:\nasciiCode 'a' returns 97.\n\nEnd of the list.\n\n",
+        "peft_model_v1": "import Data.Char\n\nconverts a character to its corresponding uppercase letter.\n\n",
+        "peft_model_v2": "import Data.Char\n\nconverts a character to its corresponding uppercase letter.\n\nconverts a character to its corresponding lowercase letter.\n\nreturns True if the character is a whitespace character, otherwise False.\n\nchecks if the character is a letter (A-Z, a-z) or an underscore.\n\nchecks if the character is a digit (0-9).\n\nchecks if the character is a punctuation mark (e.g., '.', ',', ':', etc.).\n\nchecks if the character is a whitespace character (e.g., space, tab, newline).\n\nchecks if the character is a letter or an underscore.\n\nchecks if the character is a letter or an underscore and returns its corresponding uppercase letter.\n\nchecks if the character is a letter or an underscore and returns its corresponding lowercase letter.\n\nchecks if the character is a letter or an underscore and returns True if it is a valid identifier part, otherwise False.\n\nchecks if the character is a letter"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a function called double that takes a String and returns another String. Call a helper function construct with the reversed input string s and an initial counter value of 1.\nOutput:\n",
+        "base_model": "double s = construct (reverse s) 1\n\n",
+        "peft_model_v1": "double s = construct (reverse s) 1\n\n",
+        "peft_model_v2": "double s = construct (reverse s) 1\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImplement the construct helper function to process the reversed string by doubling every second digit starting from the rightmost digit. Recursively process the rest of the string.\nOutput:\n",
+        "base_model": "reverseString (digit:rest) = (2 * digit : reverseString (filter (\\x -> not (elemDigit x rest)) rest))\n\n",
+        "peft_model_v1": "reverseString (digit:rest) = (2 * digit : reverseString (filter (\\x -> not (elemDigit x rest)) rest))\n\n",
+        "peft_model_v2": "reverseString (digit:rest) = (2 * digit : reverseString (filter (\\x -> not (elemDigit x rest)) rest))\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a function named sumS that takes a String and returns an Int. Implement the sumS function to convert each character in the input string to its corresponding integer value, then calculate the sum of these integers.\nOutput:\n",
+        "base_model": "sumS :: String -> Int\n\nsumInts :: IO Int\nsumInts = do\n\nsumChars <- getContents\n\nlet nums = map (\\c -> read [c]) (filter isAlpha c)\n\nsumS = sum nums\n\nsumInts\n\n",
+        "peft_model_v1": "sumS :: String -> Int\n\nsumInts :: IO Int\nsumInts = do\n\nsumChars <- getContents\n\nlet ints = map (\\c -> read [c]) sumChars\n\nsum <- sumInts ints\n\nreturn sum\n\nInput:\nsumS \"123\"\n\n",
+        "peft_model_v2": "sumS :: String -> Int\n\nsumInts :: IO Int\nsumInts = do\n\nsumChars <- getContents\n\nlet nums = map (\\c -> read [c]) (filter isAlpha c)\n\nsumS = sum\n\nsumInts\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a function named isValid that takes a String and returns a Bool. Implement the isValid function to check whether the input string represents a valid Luhn number. Filter out all non-digit characters, double every second digit, calculate the sum of all digits, and check if the sum is divisible by 10. Ensure that the normalized string is not \"0\". If both conditions are true, return True; otherwise, return False.\nOutput:\n",
+        "base_model": "isValid input = not (null (filter (\\c -> not (isDigit c)) input)) &&\n(map (\\c -> if (isDigit c) then (digitToInt c) else (1+sum (map (\\c -> if (isDigit c) then (c:c) else (c))) ) ) (drop (length input `div` 2) input)) &&\nnot (null (filter (\\c -> isDigit c) input)) &&\ninput /= \"0\"\n\nend of task.\n\n",
+        "peft_model_v1": "isValid input = not (null (filter (\\c -> not (isDigit c)) input)) &&\n(foldl (\\acc c -> if (digitToInt c - digitToInt '0') `mod` 10 == 0 then acc+c else acc) 0 [c | c <- input, c `notElem` \"0\"]) &&\nnot (input == \"0\")\n\nend of task.\n\n",
+        "peft_model_v2": "isValid input = not (null (filter (\\c -> not (isDigit c)) input)) &&\n(foldl (\\acc c -> if (digitToInt c - digitToInt '0') `mod` 10 == 0 then acc+c else acc) 0 (map (\\c -> if (digitToInt c - digitToInt '0') `mod` 10 == 0 then c else 0) (filter (\\c -> not (isDigit c)) input))) &&\nnot (null input) && (not (null (filter (\\c -> isDigit c) input)))\n\nend of task.\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDeclare the type signature for the nth function, specifying that it takes an Int as input and returns a Maybe Integer.\nOutput:\n",
+        "base_model": "n :: Int -> Maybe Integer\n\n",
+        "peft_model_v1": "n :: Int -> Maybe Integer\n\n",
+        "peft_model_v2": "n :: Int -> Maybe Integer\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine the nth function with pattern matching. If n is less than 1, return Nothing to indicate an invalid input. If n equals 1, return Just 2 to indicate that the first prime number is 2. For any other value of n, calculate the n-th prime number using the isPrime function and the filter function.\nOutput:\n",
+        "base_model": "nth (1+) = Just 2\n\nnth n | n < 1 = Nothing | otherwise = Just (filter isPrime [2..])\n\nend of pattern matching\n\nend of nth definition\n\n",
+        "peft_model_v1": "nth (1+) = Just 2\n\nnth n | n < 1 = Nothing | otherwise = Just (filter isPrime [2..])\n\nend of pattern matching\n\nend of nth definition\n\n",
+        "peft_model_v2": "nth (1+) = Just 2\n\nnth n | n < 1 = Nothing | otherwise = Just (filter isPrime [2..])\n\nend of pattern matching\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine the isPrime function, taking an integer i and returning a boolean indicating whether i is prime. Check whether there are no divisors for i other than 1 and i itself. Iterate over numbers from 3 up to the square root of i (rounded down) and check whether i is divisible by any of them. If none are divisors, i is prime.\nOutput:\n",
+        "base_model": "isPrime i = all (\\j -> i `mod` j /= 0) [2..int sqrt i]\n\n",
+        "peft_model_v1": "isPrime i = all (\\j -> i `mod` j /= 0) [2..int sqrt i]\n\n",
+        "peft_model_v2": "isPrime i = all (\\j -> i `mod` j /= 0) [2..int sqrt i]\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine a Haskell module named GameOfLife with tick as its exported function.\nOutput:\n",
+        "base_model": "module GameOfLife where\n\ntick :: IO ()\n\n",
+        "peft_model_v1": "module GameOfLife where\n\ntick :: IO ()\n\n",
+        "peft_model_v2": "module GameOfLife where\n\ntick :: IO ()\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImplement the tick function, which takes a 2D list of integers ([[Int]]) representing the current state of the grid and returns a new 2D list of integers representing the next state after one iteration.\nOutput:\n",
+        "base_model": "tick ([[x]]) = [[x'], [y']]\n\nwhere x' is obtained by incrementing x by 1, and y' is obtained by incrementing y by 1.\n\n",
+        "peft_model_v1": "tick ([[x]]) = [[x], []]\n\n",
+        "peft_model_v2": "tick ([[x]]) = [[x'], [y']]\n\nwhere x' is obtained by incrementing x by 1, and y' is obtained by incrementing y by 1.\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nUse list comprehensions to iterate over each cell in the input matrix. Inside the list comprehension, define a nested function turnCell that takes the coordinates (x, y) of a cell and returns its new state based on the rules of the Game of Life.\nOutput:\n",
+        "base_model": "let turnCell (x, y) = do\n    state <- get\n    let neighbors = [(x', y') | x' <- [x-1, x, x+1], y' <- [y-1, y, y+1], isValid (x', y') state]\n    let nextState = case filter (isValid state) neighbors of\n                        [] -> state\n                        _: _ -> 1 + fromEnum (state!! index)\n                    index = y * width + x\n    put nextState\n    return nextState\n\nThe list comprehension filters the neighbors of the current cell based on the isValid rule.\n\nIf the current cell's state is valid (i.e., not empty), it adds the current state to the list of neighbors.\n\nIf the current cell's state is",
+        "peft_model_v1": "let turnCell (x, y) = do\n    state <- get\n    let neighbors = [(x', y') | x' <- [x-1, x, x+1], y' <- [y-1, y, y+1], isValid (x', y') state]\n    let nextState = case filter (isValid state) neighbors of\n                        [] -> state\n                        _: _ -> 1 + fromEnum (state!! index)\n                    index = y * width + x\n    put (nextState %2 == 1)\n    return (state, nextState)\n\niterateState :: Matrix Word8 -> IO ()\niterateState state = do\n    let nextState = [turnCell state | c <- matrix]\n    put state >>= \\s -> iterateState (fromList nextState)",
+        "peft_model_v2": "let turnCell (x, y) = do\n    state <- get\n    let neighbors = [(x', y') | x' <- [x-1, x, x+1], y' <- [y-1, y, y+1], isValid (x', y') state]\n    let nextState = case filter (isValid state) neighbors of\n                        [] -> state\n                        _: _ -> 1 + fromEnum (state!! index)\n                    index = y * width + x\n    put nextState\n    return nextState\n\nThe list comprehension filters the neighbors of the current cell based on the isValid rule.\n\nIf the current cell's state is valid (i.e., not empty), it adds the current state to the list of neighbors.\n\nIf the current cell's state is"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nUse pattern matching within turnCell to handle the current state of the cell (either 0 or 1). If the current cell is dead (0), use a conditional expression to determine its next state based on the number of live neighbors. If the current cell is alive (1), use another conditional expression to determine its next state based on the number of live neighbors.\nOutput:\n",
+        "base_model": "turnCell (1:xs) = if k == 2 then 1 else if k > 1 then 0 else 1:xs\nturnCell (0:xs) = if k == 2 then 1 else if k > 1 then 0 else xs\n\n",
+        "peft_model_v1": "turnCell (1:xs) = if k == 2 then 1 else if k > 1 then 0 else 1:xs\nturnCell (0:xs) = if k == 2 then 1 else if k > 1 then 0 else xs\n\n",
+        "peft_model_v2": "turnCell (1:xs) = if k == 2 then 1 else if k > 1 then 0 else 1:xs\nturnCell (0:xs) = if k == 2 then 1 else if k > 1 then 0 else xs\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImplement a helper function countLive that takes the coordinates (x, y) of a cell and calculates the number of live neighbors it has. Inside countLive, use list comprehensions to iterate over the neighboring cells and sum their values.\nOutput:\n",
+        "base_model": "countLive (x, y) = sum $ [if (1 <= j && j <= n) then p else 0 | (j, p) <- [(x,y)], (i, j, p) <- grid]\n\n",
+        "peft_model_v1": "countLive (x, y) = sum $ [if (1 <= j && j <= n) then p else 0 | (j, p) <- [(x,y)], (i, j, p) <- grid]\n\n",
+        "peft_model_v2": "countLive (x, y) = sum $ [if (1<=j && j<= n) then p else 0 | (j, p) <- [(x,y)], (x,y) <- [(x,y)], d]\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nEnsure that cells at the edge of the grid are correctly handled by checking that their coordinates are within the valid range. Define a list indices containing the valid indices for both rows and columns of the matrix. Use this indices list to ensure that when calculating neighboring cell coordinates, they stay within the bounds of the matrix. Make sure to exclude the current cell from the neighbor count calculation.\nOutput:\n",
+        "base_model": "neighbor_count (Row i) = length (filter (elem i. fst) indices') - 1\nneighbor_count (Col j) = length (filter (elem j. snd) indices') - 1\n\nindices' = filter (\\(x,y) -> in_range x && in_range y)\n\nin_range x y = x >= 1 && x <= maxX && y >= 1 && y <= maxY\n\nwhere maxX = length rows - 1, maxY = length (head rows) - 1\n\nneighbor_count (Grid _ _ : _ _) = 0\n\nindices = [ (x, y)",
+        "peft_model_v1": "neighbor_count (Row i) = length (filter (elem i. fst) indices') - 1\nneighbor_count (Col j) = length (filter (elem j. snd) indices') - 1\n\nindices' = filter (\\(x,y) -> in_range x && in_range y)\n\nin_range x y = x >= 1 && x <= maxX && y >= 1 && y <= maxY\n\nwhere maxX = length rows - 1, maxY = length (head rows) - 1\n\nneighbor_count (Grid _ _ : _ _) = 0\n\nindices = [ (x, y)",
+        "peft_model_v2": "neighbor_count (Row i) = length (filter (elem i. fst) indices') - 1\nneighbor_count (Col j) = length (filter (elem j. snd) indices') - 1\n\nindices' = filter (\\(x,y) -> in_range x && in_range y)\n\nin_range x y = x >= 1 && x <= maxX && y >= 1 && y <= maxY\n\nwhere maxX = length rows - 1, maxY = length (head rows) - 1\n\nneighbor_count (Grid _ _ : _ _) = 0\n\nindices = [ (x, y)"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nCreate a Haskell module named Triangle to encapsulate the functions related to generating Pascal's triangle.\nOutput:\n",
+        "base_model": "module Triangle\n\nImports the 'fromList' function from the Data.List module, which converts a list into a sequence.\n\nImports the 'unfoldr' function from the Data.List module, which generates a sequence from a function that produces pairs (x, y), starting with an initial value x.\n\nDefines the 'triangle' function, which generates Pascal's triangle using 'fromList' and 'unfoldr'.\n\nTests the 'triangle' function by checking if the generated triangle matches the expected result.\n\n",
+        "peft_model_v1": "module Triangle\n\nImports the 'fromList' function from the Data.List module, which converts a list into a sequence.\n\nImports the 'unfoldr' function from the Data.List module, which generates a sequence from a function that produces pairs (x, y), starting with an initial value x.\n\nDefines the 'triangle' function, which generates Pascal's triangle using 'fromList' and 'unfoldr'.\n\nTests the 'triangle' function by checking if the generated triangle matches the expected result.\n\n",
+        "peft_model_v2": "module Triangle\n\nImports the 'fromList' function from the Data.List module, which converts a list into a sequence.\n\nImports the 'unfoldr' function from the Data.List module, which generates a sequence from a function that produces pairs (x, y), starting with an initial value x.\n\nDefines the 'triangle' function, which generates Pascal's triangle using 'fromList' and 'unfoldr'.\n\nTests the 'triangle' function by checking if the generated triangle matches the expected result.\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nDefine the type signature of the rows function. It should take an integer n as input and return a list of lists of integers ([[Integer]]).\nOutput:\n",
+        "base_model": "type rows :: Int -> [[Integer]]\n\n",
+        "peft_model_v1": "type rows :: Int -> [[Integer]]\n\n",
+        "peft_model_v2": "type rows :: Int -> [[Integer]]\n\n"
+    },
+    {
+        "prompt": "Instruct: You are a helpful assistant proficient in Haskell programming language. Please generate code strictly in Haskell based on the following descriptions and instructions.\nImplement the rows function using list comprehension or higher-order functions like take and map. rows should generate the first n rows of Pascal's triangle.\nOutput:\n",
+        "base_model": "rows n = map (take n) (map (\\x -> reverse [1..x]) [1..])\n\n",
+        "peft_model_v1": "rows n = map (take n) (drop n pascals)\n\n",
+        "peft_model_v2": "rows n = map (take n) (map (\\x -> reverse (take x xs)) [1..])\n\n"
+    }
+]

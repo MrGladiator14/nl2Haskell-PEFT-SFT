@@ -1,0 +1,774 @@
+[
+    {
+        "Statement": "trimString :: String -> String",
+        "Description": "Define a function trimString that takes a String and removes leading and trailing whitespace."
+    },
+    {
+        "Statement": "case Nil",
+        "Description": "If the case is an empty list."
+    },
+    {
+        "Statement": "insert v Leaf = Node Leaf v Leaf;",
+        "Description": "If the tree is a 'Leaf', then insert 'v' into it."
+    },
+    {
+        "Statement": "name :: Person -> String",
+        "Description": "Define a function 'name' which takes a 'Person' and returns their name."
+    },
+    {
+        "Statement": "checkInput (x:_ = isUpper x",
+        "Description": "If the input string is non-empty, check if the first character is uppercase and return the result."
+    },
+    {
+        "Statement": "func :: Int -> Int",
+        "Description": "Define a function named `func` which takes an `Int` and returns an `Int`."
+    },
+    {
+        "Statement": "frequencies (x:xs) = insert x (1 + (maybe 0 id (lookup x m))) m",
+        "Description": "For a non-empty list, 'frequencies' inserts the first element into the map, with its frequency being 1 plus the frequency of that element in the remaining elements (or 0 if it doesn't exist)."
+    },
+    {
+        "Statement": "find p (x:xs)",
+        "Description": "Define the recursive case of the find function where a non-empty list is given. It searches for the first element that satisfies the predicate 'p'."
+    },
+    {
+        "Statement": "import qualified Data.ByteString as B",
+        "Description": "Import the 'Data.ByteString' module qualified as 'B'."
+    },
+    {
+        "Statement": "inOrder :: Tree a -> [a]",
+        "Description": "Define a function named inOrder which takes a Tree of elements of type a and returns a list of the elements in in-order traversal order."
+    },
+    {
+        "Statement": "cross :: a -> b -> (a,b)",
+        "Description": "Define the 'cross' function that takes two values 'a' and 'b', and returns a tuple '(a,b)' containing them."
+    },
+    {
+        "Statement": "reverse (x:xs) = reverse xs ++ [x]",
+        "Description": "Otherwise, reverse the rest of the list and append the first element."
+    },
+    {
+        "Statement": "data Calculation = Add Int Int | Sub Int Int | Mul Int Int | Div Int Int",
+        "Description": "Define a datatype 'Calculation' with constructors 'Add', 'Sub', 'Mul', and 'Div', each taking two 'Int' arguments."
+    },
+    {
+        "Statement": "minimum :: (Ord a, Foldable t) => t a -> a",
+        "Description": "Define 'minimum' as a function which finds the minimum element of a non-empty list."
+    },
+    {
+        "Statement": "fac :: Int -> Int",
+        "Description": "Define a function named `fac` which takes an `Int` and returns an `Int`."
+    },
+    {
+        "Statement": "removeDuplicates = nub",
+        "Description": "Define 'removeDuplicates' as the 'nub' function, which removes duplicates from a list."
+    },
+    {
+        "Statement": "liftIOm :: IO a -> IOMaybe a",
+        "Description": "Define a function liftIOm that takes an IO computation and lifts it into the IOMaybe context, allowing for side effects while still preserving the possibility of failure."
+    },
+    {
+        "Statement": "reverse (Cons x xs) = append (reverse xs) (Cons x Nil)",
+        "Description": "Otherwise, recursively call reverse with the tail of the list and prepend the head of the list to the result."
+    },
+    {
+        "Statement": "quickSort (x:xs) = quickSort [y | y <- xs, y < x] ++ [x] ++ quickSort [y | y <- xs, y >= x]",
+        "Description": "Otherwise, recursively call quickSort on the elements less than x, prepend x to the result, and append the result of recursively calling quickSort on the elements greater than or equal to x."
+    },
+    {
+        "Statement": "module Main where",
+        "Description": "Define the module 'Main'."
+    },
+    {
+        "Statement": "fromList [] = Leaf;",
+        "Description": "If the list is empty, return a 'Leaf'."
+    },
+    {
+        "Statement": "(**) :: f a -> f b -> f (a,b)",
+        "Description": "Declare the '(**)' operator signature for the 'Monoidal' type class, which takes two values of types 'f a' and 'f b', and returns a value of type 'f (a,b)' representing their monoidal product."
+    },
+    {
+        "Statement": "splice [] ys = ys",
+        "Description": "Define the splice function for an empty list and a non-empty list ys to return the list ys."
+    },
+    {
+        "Statement": "class Functor f => Monoidal f where",
+        "Description": "Define a type class 'Monoidal' with a superclass constraint 'Functor f', representing monoidal functors."
+    },
+    {
+        "Statement": "dropWhile :: (a -> Bool) -> [a] -> [a]",
+        "Description": "Define 'dropWhile' as a function which removes elements from a list while the predicate holds."
+    },
+    {
+        "Statement": "contains xs ys = isInfixOf xs ys",
+        "Description": "The implementation of 'contains' simply applies the 'isInfixOf' function to the two input lists 'xs' and 'ys'."
+    },
+    {
+        "Statement": "con \"notEqual\" ((/=) :: Int -> Int -> Bool),",
+        "Description": "Include the 'notEqual' operator signature."
+    },
+    {
+        "Statement": "con \"logicalOr\" ((||) :: Bool -> Bool -> Bool),",
+        "Description": "Include the 'logicalOr' function signature."
+    },
+    {
+        "Statement": "monadd mx y = mx >>= (\\x -> my >>= (\\y -> return $ x+y))",
+        "Description": "Use bind operator `(>>=)` and `return` to sequentially extract values from `mx` and `my`, add them, and wrap the result in the monadic context."
+    },
+    {
+        "Statement": "return x = Cons x Nil",
+        "Description": "Define the return function for the List monad, which creates a singleton list containing the input value."
+    },
+    {
+        "Statement": "apply (induction t1)",
+        "Description": "Begin the proof by induction over tree t1."
+    },
+    {
+        "Statement": "msum :: (Foldable t, Alternative f) => t (f a) -> f a\nmsum = foldr (<|>) empty",
+        "Description": "Define a function 'msum' that takes a foldable container of alternative structures and returns a single alternative structure containing the result of folding over the container using the '<|>' operation."
+    },
+    {
+        "Statement": "seq :: a -> b -> b",
+        "Description": "Define a function seq that takes two arguments a and b, and returns b."
+    },
+    {
+        "Statement": "using assms sorted append by fastforce",
+        "Description": "Use the given sorted lemma and fastforce tactic to solve the subgoal."
+    },
+    {
+        "Statement": "maxInts = foldl' max (minBound :: Int)",
+        "Description": "The implementation of 'maxInts' uses 'foldl'' to fold the input list of integers using the 'max' function and an initial accumulator value of 'minBound :: Int' (the smallest possible integer value)."
+    },
+    {
+        "Statement": "data Tree a = Node a (Map Path (Tree a)) | Leaf",
+        "Description": "Define a tree data structure 'Tree a', where each node contains a value of type 'a' and a map from paths ('Path') to subtrees ('Tree a'), or it can be a leaf node."
+    },
+    {
+        "Statement": "\"sortedT t ⟶ sortedT (insert v t)\"",
+        "Description": "If the tree t is sorted, then inserting v into t will result in a sorted tree."
+    },
+    {
+        "Statement": "p n= n≥ 0",
+        "Description": "Define `p` as a function that takes `n` and returns `True` if `n` is greater than or equal to 0."
+    },
+    {
+        "Statement": "proof (induction xs arbitrary: n)",
+        "Description": "Apply induction on the list with an arbitrary number `n`."
+    },
+    {
+        "Statement": "con \"imagPart\" (imagPart :: Complex Float -> Float),",
+        "Description": "Include the 'imagPart' function signature in 'complexSig'."
+    },
+    {
+        "Statement": "getName :: IOMaybe String",
+        "Description": "Define a function getName that represents an IOMaybe computation that can get a valid name from the user."
+    },
+    {
+        "Statement": "| n `mod` 2 == 0 = True",
+        "Description": "If `n` is even, return `True`."
+    },
+    {
+        "Statement": "by auto",
+        "Description": "Use the `auto` tactic to solve the subgoal."
+    },
+    {
+        "Statement": "import Data.List (partition)\n\nsplitEvenOdd :: [Int] -> ([Int], [Int])",
+        "Description": "Define a function 'splitEvenOdd' that takes a list of integers and returns a tuple containing two lists: one with the even numbers and one with the odd numbers. Import the 'partition' function from the 'Data.List' module."
+    },
+    {
+        "Statement": "apply (simp add: sorted_append)",
+        "Description": "Apply the `simp` tactic with the additional information `sorted_append`."
+    },
+    {
+        "Statement": "Lemma sortedT_values sets: \"sortedT t A t = (Node l v r) → (Vv € setT l. lv ≤ v) A (Vrv e setT r. rv 2 v)\"",
+        "Description": "Define a lemma asserting that if the tree `t` is sorted, then the left and right subtrees are also sorted."
+    },
+    {
+        "Statement": "tryJust :: Exception e => (e -> Maybe b) -> IO a > IO (Either b a)",
+        "Description": "Create an IO action that attempts to run the given IO action, using the provided function to filter the exceptions. If the function returns Just b, the action returns Left b, otherwise it returns Right a."
+    },
+    {
+        "Statement": "fromList (x : xs) = insert x (fromList xs) ;",
+        "Description": "Insert each element of the list into the tree."
+    },
+    {
+        "Statement": "stringToInt = foldl (\\acc x -> acc * 10 + digitToInt x) 0",
+        "Description": "The implementation of 'stringToInt' uses 'foldl' to iterate over the characters in the input string, converting each digit character to an integer using 'digitToInt', and accumulating the resulting value by multiplying the previous value by 10 and adding the new digit."
+    },
+    {
+        "Statement": "readUntilWithCount ending = aux ending 0",
+        "Description": "Define the implementation of readUntilWithCount by calling the auxiliary function aux with the ending string and an initial count of 0."
+    },
+    {
+        "Statement": "returnIOM = return . Just",
+        "Description": "Implement the returnIOM function by composing the Just constructor with the return function from the Monad typeclass."
+    },
+    {
+        "Statement": "instance Applicative Maybe where\n    pure = Just\n    Just f <*> m = fmap f m\n    Nothing <*> _ = Nothing\n    _ *> b = b\n    a <* _ = a",
+        "Description": "Provide an instance of the 'Applicative' type class for the 'Maybe' data type. This instance allows for applying and combining 'Maybe' computations."
+    },
+    {
+        "Statement": "apply (simp add: sizeT_append)",
+        "Description": "Apply the simp tactic with the additional information sizeT_append."
+    },
+    {
+        "Statement": "lift2 :: (a -> b -> c) -> (f a -> f b -> f c)",
+        "Description": "Declare the 'lift2' function signature, which takes a binary function '(a -> b -> c)' and returns a function that lifts the binary function to operate on values of types 'f a' and 'f b', returning a value of type 'f c'."
+    },
+    {
+        "Statement": "con \"add\" ((+) :: Int -> Int -> Int),",
+        "Description": "Include the 'add' function signature."
+    },
+    {
+        "Statement": "liftIOm :: IO a -> IOMaybe a",
+        "Description": "Define a function liftIOm that takes an IO a and returns an IOMaybe a."
+    },
+    {
+        "Statement": "if input == ending then return () else aux ending",
+        "Description": "Check if the input string is equal to the ending string. If it is, return an empty tuple. Otherwise, recursively call aux with the ending string."
+    },
+    {
+        "Statement": "ones = 1 : 1 : ones",
+        "Description": "Define an infinite list named ones where the first two elements are both 1, followed by itself, creating an infinite cycle."
+    },
+    {
+        "Statement": "f xs = map (\\x -> x+1) (filter (\\x -> x>1) xs)",
+        "Description": "Define the function 'f' which takes a list 'xs' and applies a mapping and filtering operation sequentially."
+    },
+    {
+        "Statement": "square :: Int -> Int\nsquare x = x * x",
+        "Description": "Define a function square that takes an integer x and returns its square."
+    },
+    {
+        "Statement": "apply (auto)",
+        "Description": "Use the auto tactic to automatically solve the generated subgoals."
+    },
+    {
+        "Statement": "case maybe_val of",
+        "Description": "Start a case expression on maybe_val."
+    },
+    {
+        "Statement": "return x;",
+        "Description": "Return the value of 'x' if 'z' is true."
+    },
+    {
+        "Statement": "inOrder Leaf = []",
+        "Description": "If the input tree is Leaf, return an empty list."
+    },
+    {
+        "Statement": "import Data.List (union)\n\nmergeUnique :: Ord a => [a] -> [a] -> [a]",
+        "Description": "Define a function 'mergeUnique' that takes two lists of elements of any type 'a' that implements the 'Ord' typeclass, and returns a list containing the unique elements from both input lists. Import the 'union' function from the 'Data.List' module."
+    },
+    {
+        "Statement": "    | otherwise = []",
+        "Description": "Define the condition for the recursive case of the takeWhile function. If the predicate 'p' does not hold true for the current element 'x', it terminates the list."
+    },
+    {
+        "Statement": "or' :: [Bool] -> Bool",
+        "Description": "Define a function or' that takes a list of Booleans and returns True if at least one of the elements is True, otherwise False."
+    },
+    {
+        "Statement": "(Cons x xs) >>= f = append (f x) (xs >>= f)",
+        "Description": "If the input to the bind operation is Cons x xs, apply the function f to x, recursively apply the bind operation to xs, and concatenate the results."
+    },
+    {
+        "Statement": "[]",
+        "Description": "Define an empty list."
+    },
+    {
+        "Statement": "\"(Vlv € setT l. lv ≤ v)\"",
+        "Description": "Assume that for every `lv` in the set of `l`, `lv` is less than or equal to `v`."
+    },
+    {
+        "Statement": "merge (x:xs) (y:ys) = y : merge (x:xs) ys",
+        "Description": "If the first element of the second list is less than or equal to the first element of the first list, 'merge' prepends that element to the result of merging the remaining elements."
+    },
+    {
+        "Statement": "Nothing -> return Nothing",
+        "Description": "If maybe_val is Nothing, return Nothing."
+    },
+    {
+        "Statement": "add a b = a+b",
+        "Description": "Define a function 'add' that takes two arguments 'a' and 'b' and returns their sum."
+    },
+    {
+        "Statement": "where aux ending count = do",
+        "Description": "Begin the definition of the `aux` function using the do notation for monadic computations. The `aux` function takes the `ending` string and the current `count` as arguments."
+    },
+    {
+        "Statement": "lemma contains_rev: \"contains P (rev xs) ⟷ contains P xs\"",
+        "Description": "Define a lemma asserting that `P` holds for an element in the reversed list if and only if `P` holds for that element in the original list."
+    },
+    {
+        "Statement": "]",
+        "Description": "End the 'treesig2' list definition."
+    },
+    {
+        "Statement": "name arg1 arg2 ... argn = <expr>",
+        "Description": "Define a function named 'name' with 'n' arguments and an expression to be evaluated."
+    },
+    {
+        "Statement": "insert :: Ord a => a -> [a] -> [a]",
+        "Description": "Define a function named insert which takes an element of type a, where a is an instance of the Ord typeclass, and a sorted list of elements of the same type, and inserts the element into the correct position in the list."
+    },
+    {
+        "Statement": "deleteFirstsBy eq xs (y:ys)",
+        "Description": "Define the recursive case of the deleteFirstsBy function where two non-empty lists are given. It removes the first occurrence of each element from the first list that satisfies the predicate 'eq'."
+    },
+    {
+        "Statement": "takeWhile p (x:xs)",
+        "Description": "Define the recursive case of the takeWhile function where a non-empty list is given. It takes elements from the list while the predicate 'p' holds true."
+    },
+    {
+        "Statement": "mergeSort [] = []",
+        "Description": "For an empty list, 'mergeSort' returns an empty list."
+    },
+    {
+        "Statement": "sortString :: String -> String",
+        "Description": "Define a function sortString that takes a String and sorts it in ascending order."
+    },
+    {
+        "Statement": "fac :: Int -> Int",
+        "Description": "Define a function named `fac` which takes an `Int` and returns an `Int`."
+    },
+    {
+        "Statement": "proof (induction t rule:insert.induct)",
+        "Description": "Apply induction on the tree with the rule for the 'insert' function."
+    },
+    {
+        "Statement": "(Sum 500) <> (Sum 400) <> (Sum 100)",
+        "Description": "Compute the result of combining three Sum values using the Semigroup (<>) operation, which should be Sum {getSum = 1000}."
+    },
+    {
+        "Statement": "where f' x y = f (x, snd y )",
+        "Description": "Define a helper function f' that takes x and y, and applies the original function f to (x, snd y), where snd y is the second component of y."
+    },
+    {
+        "Statement": "treeToSet (Node x l r) = insert x (union (treeToSet l) (treeToSet r))",
+        "Description": "For a non-empty tree, recursively convert the left and right subtrees into sets, union them, and insert the current node's value into the resulting set."
+    },
+    {
+        "Statement": "apply auto",
+        "Description": "Use the auto tactic to automatically solve the generated subgoals."
+    },
+    {
+        "Statement": "unit :: Applicative f => f ()\n\nunit = pure ()",
+        "Description": "Define a function unit that takes an Applicative functor f and returns its unit value f (), using the pure function from the Applicative typeclass."
+    },
+    {
+        "Statement": "let ncount = count + 1",
+        "Description": "Calculate the new count by incrementing the current count by 1, and bind it to the variable ncount."
+    },
+    {
+        "Statement": "insertionSort :: Ord a => [a] -> [a]",
+        "Description": "Define a function named insertionSort which takes a list of elements of type a, where a is an instance of the Ord typeclass, and returns a sorted list of the same elements."
+    },
+    {
+        "Statement": "Nothing -> return Nothing",
+        "Description": "If maybe_val is Nothing, return a failed IOMaybe computation by returning Nothing."
+    },
+    {
+        "Statement": "mapM_ f = foldr ((>>) . f) (return ())",
+        "Description": "Define 'mapM_' as a fold operation that maps each element of a structure to a monadic action, and evaluates these actions from left to right, discarding the results."
+    },
+    {
+        "Statement": "writeChan :: Chan a -> a -> IO ()",
+        "Description": "Write a value of type a to the given channel, blocking until there is a receiver."
+    },
+    {
+        "Statement": "data [l a = [] a : [a]",
+        "Description": "Declare a data type [a] that represents a list of elements of type a, with two constructors: [] (representing an empty list) and (:) (representing a non-empty list by prepending an element to an existing list)."
+    },
+    {
+        "Statement": "\\x -> x+1",
+        "Description": "Define an anonymous function that takes a parameter 'x' and returns 'x+1'."
+    },
+    {
+        "Statement": "deriving (Eq, Ord)",
+        "Description": "Derive instances of various type classes (such as 'Eq', 'Ord', etc.) for the 'Dual' data type."
+    },
+    {
+        "Statement": "permutations' = permutations",
+        "Description": "The implementation of 'permutations'' simply applies the 'permutations' function to the input list."
+    },
+    {
+        "Statement": "where aux ending count = do",
+        "Description": "Declare an auxiliary function aux that takes the ending string and a count as arguments, and performs the following actions in the IO monad."
+    },
+    {
+        "Statement": "by (induct xs) (auto simp:sorted insert)",
+        "Description": "Prove the lemma by induction on 'xs' and using 'auto simp:sorted insert'."
+    },
+    {
+        "Statement": "apply (induct t)",
+        "Description": "Begin the proof by induction over tree t."
+    },
+    {
+        "Statement": "removeDuplicates = nub",
+        "Description": "Use the `nub` function to remove duplicate elements from the list."
+    },
+    {
+        "Statement": "split :: String -> [String]",
+        "Description": "Define a function 'split' that takes a string and returns a list of substrings separated by whitespace."
+    },
+    {
+        "Statement": "monadd mx my = do",
+        "Description": "Define `monadd"
+    },
+    {
+        "Statement": "dropWhile :: (a -> Bool) -> [a] -> [a]",
+        "Description": "Define a function named `dropWhile` which takes a function and a list and returns a list."
+    },
+    {
+        "Statement": "sorted :: Ord a => [a] -> Bool",
+        "Description": "Define 'sorted' as a function which takes a list of 'a' and returns a boolean."
+    },
+    {
+        "Statement": "type IOMaybe a = IO (Maybe a)\n\nreturnIOM :: a -> IOMaybe a\nreturnIOM = return . Just\n\nbindIOM :: IOMaybe a -> (a -> IOMaybe b) -> IOMaybe b\nbindIOM iom f = do\n    maybe_val <- iom\n    case maybe_val of\n        Nothing -> return Nothing\n        Just val -> f val",
+        "Description": "Define a new type synonym 'IOMaybe' that represents a computation that can perform side effects and either succeed with a value of type 'a' or fail without a value. Implement functions 'returnIOM' and 'bindIOM' to work with 'IOMaybe'."
+    },
+    {
+        "Statement": "maximum [x] = x",
+        "Description": "If the list has only one element, return that element."
+    },
+    {
+        "Statement": "data Tree a = Leaf | Node (Tree a) a (Tree a) ;",
+        "Description": "Define a data type 'Tree' with type variable 'a' which can either be a 'Leaf' or a 'Node' with three parameters."
+    },
+    {
+        "Statement": "head :: [a] -> a",
+        "Description": "Return the first element of a list."
+    },
+    {
+        "Statement": "instance MonadIO m => MonadIO (ReaderT r m) where\n    liftIO = lift . liftIO",
+        "Description": "Provide an instance of the 'MonadIO' type class for the 'ReaderT' monad transformer, assuming that 'm' is an instance of the 'MonadIO' type class. This instance allows for lifting 'IO' computations into the 'ReaderT' monad transformer."
+    },
+    {
+        "Statement": "f (1+1) (2+1)",
+        "Description": "Apply the function f with arguments 2 and 3."
+    },
+    {
+        "Statement": "| p (head xs) = dropWhile p (tail xs)",
+        "Description": "If the predicate `p` holds true for the head of the list, drop the head and continue."
+    },
+    {
+        "Statement": "apply auto",
+        "Description": "Use the auto tactic to automatically solve the generated subgoals."
+    },
+    {
+        "Statement": "dropWhile p xs",
+        "Description": "Drop elements from the list as long as the predicate `p` holds true."
+    },
+    {
+        "Statement": "import Data.List (foldl')\n\nreverse' :: [a] -> [a]",
+        "Description": "Define a function 'reverse'' that takes a list of elements of any type 'a' and returns the reversed list. Import the 'foldl'' function from the 'Data.List' module, which is a strict (non-lazy) version of 'foldl'."
+    },
+    {
+        "Statement": "fac n",
+        "Description": "Define `fac` with parameter `n`."
+    },
+    {
+        "Statement": "calc (Mul x y) = xy",
+        "Description": "Define the 'calc' function pattern matching on the 'Mul' constructor, returning the product of 'x' and 'y'."
+    },
+    {
+        "Statement": "member :: a -> Set a -> Bool",
+        "Description": "Declare a function member that checks if an element is in a set."
+    },
+    {
+        "Statement": "treesig2 :: [Sig)",
+        "Description": "Define 'treesig2' as a list of Sig."
+    },
+    {
+        "Statement": "main = putStrLn \"Hello World!\"",
+        "Description": "Print 'Hello World!' when 'main' is executed."
+    },
+    {
+        "Statement": "newtype Product a = Product { getProduct :: a }\nderiving (Eq, Ord, ..... )",
+        "Description": "Define a new data type Product that wraps a value of type a, and derives various type class instances for it, such as Eq, Ord, etc."
+    },
+    {
+        "Statement": "getName = do",
+        "Description": "Begin the definition of getName by using a do block."
+    },
+    {
+        "Statement": "unit :: f ()",
+        "Description": "Declare the 'unit' function signature for the 'Monoidal' type class, which returns a value of type 'f ()' representing the monoidal unit."
+    },
+    {
+        "Statement": "printInput = runKleisli ka ()\n  where ka = Kleisli (\\_-> getLine) >>> Kleisli putStrLn",
+        "Description": "Define a function 'printInput' that reads a line from the input and prints it to the output. It uses the 'Kleisli' arrow 'ka', which is composed of two 'Kleisli' arrows: one that reads a line from the input using 'getLine', and one that prints the line to the output using 'putStrLn'."
+    },
+    {
+        "Statement": "bubbleUp x (y:ys) | x > y = y : bubbleUp x ys",
+        "Description": "If x is greater than the head of the accumulator, prepend the head to the result of recursively calling bubbleUp with x and the tail of the accumulator."
+    },
+    {
+        "Statement": "revAcc = aux []",
+        "Description": "Define 'revAcc' as an auxiliary function."
+    },
+    {
+        "Statement": "(==) (C n) (C m) = n == m",
+        "Description": "Define the equality operator '==' for comparing two temperatures in Celsius. It returns true if their values are equal."
+    },
+    {
+        "Statement": "instance Monad ((->))",
+        "Description": "Define a Monad instance for functions."
+    },
+    {
+        "Statement": "length :: List a -> Int",
+        "Description": "Define a function named length which takes a List of elements of type a and returns the length of the list as an Int."
+    },
+    {
+        "Statement": "have \"Viv € setT (insert v l). iv ≤ tv\" by (simp add: setT_ insert tv disjunct True)",
+        "Description": "assert that all the elements in the setT (insert v l) are less than or equal to 'tv'."
+    },
+    {
+        "Statement": "input <- liftIO getLine",
+        "Description": "Read a line of input from the user within the `IO` monad, lifted into the `StateT` monad using `liftIO`."
+    },
+    {
+        "Statement": "sortAndRemoveDuplicates = removeDuplicates . sort",
+        "Description": "Define 'sortAndRemoveDuplicates' as the composition of the 'sort' function (which sorts the list) and the 'removeDuplicates' function (which removes duplicate elements from the sorted list)."
+    },
+    {
+        "Statement": "import System.Exit",
+        "Description": "Import the System.Exit module to handle program exit."
+    },
+    {
+        "Statement": "minimum :: Ord a => [a] -> a",
+        "Description": "Define a function named `minimum` which takes a list of type `[a]` and returns an element of type `a`."
+    },
+    {
+        "Statement": "z = func3 arg",
+        "Description": "Define a variable 'z' which is assigned the result of calling function 'func3' with argument 'arg'."
+    },
+    {
+        "Statement": "fac n",
+        "Description": "Define `fac` with parameter `n`."
+    },
+    {
+        "Statement": "| x == y    = True",
+        "Description": "If the first element of the list is `y`, return `True`."
+    },
+    {
+        "Statement": "Induction Base",
+        "Description": "Define induction base."
+    },
+    {
+        "Statement": "  fail :: String -> m a",
+        "Description": "Handle failure within a monadic computation."
+    },
+    {
+        "Statement": "(+) :: Num a => a -> a -> a",
+        "Description": "Define an operator '+' which takes two arguments of type 'a' belonging to the 'Num' typeclass and returns a value of the same type."
+    },
+    {
+        "Statement": "import Data.List (intersect)\n\ncommonElements :: Eq a => [a] -> [a] -> [a]",
+        "Description": "Define a function 'commonElements' that takes two lists of elements of the same type 'a' that implements the 'Eq' typeclass, and returns a list containing the elements that are present in both input lists. "
+    },
+    {
+        "Statement": "return ncount",
+        "Description": "If the input string is equal to the ending string, return the final count."
+    },
+    {
+        "Statement": "foldl' :: (a -> b -> a) -> a -> Seq b -> a",
+        "Description": "Declare a function foldl' that folds a sequence strictly from the left with a binary function."
+    },
+    {
+        "Statement": "returniOM :: a -> IOMaybe a",
+        "Description": "Define a function returnIOM that takes a value of type a and returns a successful IOMaybe computation with that value."
+    },
+    {
+        "Statement": "rotateList :: Int -> [a] -> [a]",
+        "Description": "Define a function rotateList that takes an Int and a list, and rotates the list to the left by the specified number of positions."
+    },
+    {
+        "Statement": "quickSort :: Ord a => [a] -> [a]",
+        "Description": "Define a function named quickSort which takes a list of elements of type a, where a is an instance of the Ord typeclass, and returns a sorted list of the same elements."
+    },
+    {
+        "Statement": "con \"dropFirst\" (drop :: Int -> [a] -> [a]),",
+        "Description": "Include the 'dropFirst' function signature."
+    },
+    {
+        "Statement": "by auto",
+        "Description": "Use the `auto` tactic to solve the subgoal."
+    },
+    {
+        "Statement": "reverse :: List a -> List a",
+        "Description": "Define a function named reverse which takes a List of elements of type a and returns a List of the same type with the elements in reverse order."
+    },
+    {
+        "Statement": "type IOMaybe a = IO (Maybe a)",
+        "Description": "Define a new type synonym IOMaybe a that represents a computation that can perform side effects and either succeed with a value of type a or fail without a value."
+    },
+    {
+        "Statement": "apply (auto)",
+        "Description": "Use the `auto` tactic to automatically solve the generated subgoals."
+    },
+    {
+        "Statement": "type IOMaybe a = IO (Maybe a)",
+        "Description": "Define a new type synonym IOMaybe a that represents a computation that can perform side effects and either succeed with a value of type a or fail without a value."
+    },
+    {
+        "Statement": "}",
+        "Description": "End the conditional Statement and the function definition."
+    },
+    {
+        "Statement": "apply auto",
+        "Description": "Use the `auto` tactic to solve the subgoal."
+    },
+    {
+        "Statement": "() :: a -> a -> a",
+        "Description": "Define the multiplication operation '' within the 'Num' typeclass which takes two values of type 'a' and returns a value of type 'a'."
+    },
+    {
+        "Statement": "greet = do\n   putStrLn \"What is your name?\"\n   name <- getLine\n   putStrLn (\"Hello \" ++ name ++ \".\")",
+        "Description": "Define 'greet' function which prompts the user for their name, reads the input, and prints a greeting message."
+    },
+    {
+        "Statement": "import Data.Maybe",
+        "Description": "Import the 'Data.Maybe' module to access functions related to the 'Maybe' datatype."
+    },
+    {
+        "Statement": "monoTypewithvars [\"a\", \"b\", \"c\"] (Proxy :: Proxy OrdA),",
+        "Description": "Include the 'OrdA' type proxy with type variables 'a', 'b', and 'c' in 'treesig2'."
+    },
+    {
+        "Statement": "main = Lib.helloworld",
+        "Description": "Call the 'helloworld' function from 'Lib' when 'main' is executed."
+    },
+    {
+        "Statement": "instance Semigroup (Either a b)",
+        "Description": "Provide an instance of Semigroup for the Either data type, where the (<>) operation is defined to prefer the Right value if both inputs are Right, and otherwise return the non-Right value."
+    },
+    {
+        "Statement": "main :: IO ()",
+        "Description": "Declares the main function."
+    },
+    {
+        "Statement": "instance Monad a => Monad ((,) a)",
+        "Description": "Define a Monad instance for pairs."
+    },
+    {
+        "Statement": "| otherwise = x : replicate (n-1) x",
+        "Description": "Otherwise, replicate the element `x` `n` times."
+    },
+    {
+        "Statement": "postOrder :: Tree a -> [a]",
+        "Description": "Define a function named postOrder which takes a Tree of elements of type a and returns a list of the elements in post-order traversal order."
+    },
+    {
+        "Statement": "Lemma sizeT_values sets: \"sizeT t A t = (Node l v r) → (sizeT l < sizeT (Node l v r) ∧ sizeT r < sizeT (Node l v r))\"",
+        "Description": "Define a lemma asserting that if the tree t is a non-leaf node, then the sizes of its left and right subtrees are less than the size of the node itself."
+    },
+    {
+        "Statement": "takeWhile' :: (a -> Bool) -> [a] -> [a]",
+        "Description": "Define a function takeWhile' that takes a predicate p and a list xs, and returns the longest prefix of xs that satisfies p."
+    },
+    {
+        "Statement": "instance Num a => Semigroup (Product a) where",
+        "Description": "Define a 'Semigroup' instance for the 'Product' data type, constrained by the 'Num' type class constraint on 'a'."
+    },
+    {
+        "Statement": "calc (Div x y) = div x y",
+        "Description": "Define the 'calc' function pattern matching on the 'Div' constructor, returning the division of 'x' by 'y'."
+    },
+    {
+        "Statement": "\"assumes 'sortedT l'\"",
+        "Description": "Assume that l is sorted."
+    },
+    {
+        "Statement": "sum [] = 0",
+        "Description": "Define the base case of the sum function where an empty list is given, it returns 0."
+    },
+    {
+        "Statement": "prefixes = inits",
+        "Description": "The implementation of 'prefixes' simply applies the 'inits' function to the input list."
+    },
+    {
+        "Statement": "};",
+        "Description": "End of the class definition."
+    },
+    {
+        "Statement": "Nothing -> return Nothing",
+        "Description": "If maybe_val is Nothing, return Nothing."
+    },
+    {
+        "Statement": "import System.Environment",
+        "Description": "Import the System.Environment module to access environment-related functions."
+    },
+    {
+        "Statement": "f :: a -> (b -> (c -> d))",
+        "Description": "Alternatively define the function 'f' using currying syntax, where it takes an argument of type 'a' and returns a function that takes an argument of type 'b' and returns another function that takes an argument of type 'c' and finally returns a value of type 'd'."
+    },
+    {
+        "Statement": "con \"takeFirst\" (take :: Int -> [a] -> [a]),",
+        "Description": "Include the 'takeFirst' function signature."
+    },
+    {
+        "Statement": "if checkInput input",
+        "Description": "Check if the input is valid using the checkInput function."
+    },
+    {
+        "Statement": "con \"concat\"\n(concat:: [[A]]",
+        "Description": "Declare the signature for 'concat' function."
+    },
+    {
+        "Statement": "unlines' :: [String] -> String",
+        "Description": "Define a function unlines' that takes a list of strings and joins them together using newline characters."
+    },
+    {
+        "Statement": "prop x y = ((x <> y) <> mempty) === (x <> (y <> mempty))",
+        "Description": "Define a property 'prop' that checks if the associative law holds for the 'Semigroup' instance of 'Sum a' by comparing the results of two equivalent expressions involving '<>' and 'mempty'."
+    },
+    {
+        "Statement": "if input == ending then return ncount else aux ending ncount",
+        "Description": "Check if the input is equal to the `ending` string. If so, return the current `ncount` value. Otherwise, recursively call `aux` with the same `ending` string and the updated `ncount` value."
+    },
+    {
+        "Statement": "concatMap' :: (a -> [b]) -> [a] -> [b]",
+        "Description": "Define a function concatMap' that takes a function f and a list xs, and returns a new list containing the result of applying f to each element of xs, and then concatenating the results."
+    },
+    {
+        "Statement": "readUntilWithState :: String -> 10 Int",
+        "Description": "Declare a function readUntilWithState that takes a String argument and returns an IO Int value."
+    },
+    {
+        "Statement": "apply (induct t)",
+        "Description": "Begin the proof by induction over tree `t`."
+    },
+    {
+        "Statement": "descSort x = reverse (sort x)",
+        "Description": "Define 'descSort' as a function that takes an argument 'x' and returns the reverse of the sorted 'x'."
+    },
+    {
+        "Statement": "proof (induction t rule:insert. induct)",
+        "Description": "Apply induction on the tree with the rule for the 'insert' function."
+    },
+    {
+        "Statement": "nat = asc 1\n where asc n = n: (asc $ n+1)",
+        "Description": "Define an infinite list named nat where each element is an ascending sequence starting from 1."
+    },
+    {
+        "Statement": "using sorted. simps(2) sorted append by blast",
+        "Description": "Use the given sorted lemma to solve the subgoals."
+    },
+    {
+        "Statement": "safeGetLine = do",
+        "Description": "Begin the definition of safeGetLine by using a do block."
+    },
+    {
+        "Statement": "lines' :: String -> [String]",
+        "Description": "Define a function lines' that takes a string s and returns a list of strings by splitting s at newline characters."
+    },
+    {
+        "Statement": "(**) :: f a -> f b -> f (a,b)",
+        "Description": "Declare the '(**)' operator signature for the 'Monoidal' type class, which takes two values of types 'f a' and 'f b', and returns a value of type 'f (a,b)' representing their monoidal product."
+    },
+    {
+        "Statement": "\"assumes 'sortedT l'\"",
+        "Description": "Assume that l is sorted."
+    }
+]

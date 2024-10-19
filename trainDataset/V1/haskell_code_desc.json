@@ -1,0 +1,2850 @@
+[
+    {
+    "Statement": "name arg1 arg2 ... argn = <expr>",
+    "Description": "Define a function named 'name' with 'n' arguments and an expression to be evaluated."
+    },
+    {
+    "Statement": "name arg1 arg2 ... argn",
+    "Description": "Calls the function 'name' with 'n' arguments."
+    },
+    {
+    "Statement": "in_range min max x = x >= min && x <= max",
+    "Description": "Checks if the value of x is within the range specified by min and max"
+    },
+    {
+    "Statement": "sum = foldr (+) 0",
+    "Description": "Calculate the sum of a list of numbers using a right fold (foldr) with the addition operator (+) and starting with an initial accumulator value of 0."
+    },
+    {
+    "Statement": "sum [] = 0",
+    "Description": "Define a function 'sum' that takes an empty list as input and returns 0."
+    },
+    {
+    "Statement": "sum (X : XS) = X + sum XS",
+    "Description": "Define a function 'sum' that takes a non-empty list as input, where X is the head of the list and XS is the tail. It recursively calculates the sum of the elements in the list by adding the head (X) to the sum of the tail (sum XS)."
+    },
+    {
+    "Statement": "let x = func1 arg",
+    "Description": "Define a variable 'x' which is assigned the result of calling function 'func1' with argument 'arg'."
+    },
+    {
+    "Statement": "y = func2 arg",
+    "Description": "Define a variable 'y' which is assigned the result of calling function 'func2' with argument 'arg'."
+    },
+    {
+    "Statement": "z = func3 arg",
+    "Description": "Define a variable 'z' which is assigned the result of calling function 'func3' with argument 'arg'."
+    },
+    {
+    "Statement": "if z then x else y",
+    "Description": "Conditional Statement that evaluates 'z'. If 'z' is true, evaluates 'x'; otherwise, evaluates 'y'."
+    },
+    {
+    "Statement": "int func(int arg) {",
+    "Description": "Start the definition of a function named 'func' that takes an integer argument 'arg'."
+    },
+    {
+    "Statement": "int x = func1 (arg);",
+    "Description": "Define a variable 'x' of type integer which is assigned the result of calling function 'func1' with argument 'arg'."
+    },
+    {
+    "Statement": "int y = func2 (arg);",
+    "Description": "Define a variable 'y' of type integer which is assigned the result of calling function 'func2' with argument 'arg'."
+    },
+    {
+    "Statement": "int z = func3 (arg);",
+    "Description": "Define a variable 'z' of type integer which is assigned the result of calling function 'func3' with argument 'arg'."
+    },
+    {
+    "Statement": "if (z) {",
+    "Description": "Start a conditional Statement based on the value of 'z'."
+    },
+    {
+    "Statement": "return x;",
+    "Description": "Return the value of 'x' if 'z' is true."
+    },
+    {
+    "Statement": "} else {",
+    "Description": "Handle the else part of the conditional Statement."
+    },
+    {
+    "Statement": "return y;",
+    "Description": "Return the value of 'y' if 'z' is false."
+    },
+    {
+    "Statement": "}",
+    "Description": "End the conditional Statement and the function definition."
+    },
+    {
+    "Statement": "name arg1 arg2 ... argn = \"<expr>",
+    "Description": "Define a function named 'name' with 'n' arguments 'arg1' to 'argn' that evaluates to the expression '<expr>'."
+    },
+    {
+    "Statement": "name arg1 arg2 ... argn",
+    "Description": "Define a function named 'name' with 'n' arguments 'arg1' to 'argn'."
+    },
+    {
+    "Statement": "in_range min max x = x >= min && x <= max",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x'. It returns true if 'x' is within the range [min, max] (inclusive), otherwise false."
+    },
+    {
+    "Statement": "in_range 0 5 3",
+    "Description": "Check if the value 3 is within the range [0, 5]."
+    },
+    {
+    "Statement": "in_range 4 5 3",
+    "Description": "Check if the value 3 is within the range [4, 5]."
+    },
+    {
+    "Statement": "name :: <type>",
+    "Description": "Declare the type signature of a value or function named 'name' as '<type>'."
+    },
+    {
+    "Statement": "x :: Integer",
+    "Description": "Declare a variable 'x' with type Integer."
+    },
+    {
+    "Statement": "x = 1",
+    "Description": "Assign the value 1 to the variable 'x'."
+    },
+    {
+    "Statement": "y :: Bool",
+    "Description": "Declare a variable 'y' with type Bool."
+    },
+    {
+    "Statement": "y = True",
+    "Description": "Assign the value True to the variable 'y'."
+    },
+    {
+    "Statement": "z :: Float",
+    "Description": "Declare a variable 'z' with type Float."
+    },
+    {
+    "Statement": "z = 3.1415",
+    "Description": "Assign the value 3.1415 to the variable 'z'."
+    },
+    {
+    "Statement": "in_range :: Integer -> Integer -> Integer -> Bool",
+    "Description": "Declare a function 'in_range' that takes three Integer arguments and returns a Bool."
+    },
+    {
+    "Statement": "in_range min max x = x >= min && x <= max",
+    "Description": "Define the 'in_range' function to check if 'x' is within the range [min, max]."
+    },
+    {
+    "Statement": "in_range 0 5 3 <-- correct",
+    "Description": "Call the 'in_range' function with arguments 0, 5, and 3. This is a correct usage."
+    },
+    {
+    "Statement": "in_range min max x =",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x'."
+    },
+    {
+    "Statement": "in_lower_bound = min <= x;",
+    "Description": "Check if 'x' is greater than or equal to 'min' and assign the result to 'in_lower_bound'."
+    },
+    {
+    "Statement": "in_upper_bound = max >= x;",
+    "Description": "Check if 'x' is less than or equal to 'max' and assign the result to 'in_upper_bound'."
+    },
+    {
+    "Statement": "return (in_lower_bound && in_upper_bound);",
+    "Description": "Return true if 'x' is within the range [min, max], otherwise false."
+    },
+    {
+    "Statement": "in_range min max x = ilb && iub",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x', and returns whether 'x' is within the range [min, max]."
+    },
+    {
+    "Statement": "ilb = min <= x",
+    "Description": "Check if 'x' is greater than or equal to 'min' and assign the result to 'ilb'."
+    },
+    {
+    "Statement": "iub = max >= x",
+    "Description": "Check if 'x' is less than or equal to 'max' and assign the result to 'iub'."
+    },
+    {
+    "Statement": "in_range min max x = if ilb then iub else False",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x'. It returns True if 'x' is within the range [min, max], otherwise False."
+    },
+    {
+    "Statement": "ilb = min <= x",
+    "Description": "Check if 'x' is greater than or equal to 'min' and assign the result to 'ilb'."
+    },
+    {
+    "Statement": "iub = max >= x",
+    "Description": "Check if 'x' is less than or equal to 'max' and assign the result to 'iub'."
+    },
+    {
+    "Statement": "add a b = a+b",
+    "Description": "Define a function 'add' that takes two arguments 'a' and 'b' and returns their sum."
+    },
+    {
+    "Statement": "add 10 20",
+    "Description": "Call the function 'add' with arguments 10 and 20, resulting in the sum of 10 and 20."
+    },
+    {
+    "Statement": "name <args> = ... name <args'> ...",
+    "Description": "Define a recursive function named 'name' that takes arguments '<args>' and recurses on itself with arguments '<args>'."
+    },
+    {
+    "Statement": "fac n = if n <= 1 then 1 else n * fac (n-1)",
+    "Description": "Define a recursive function 'fac' that calculates the factorial of 'n'. If 'n' is less than or equal to 1, return 1; otherwise, return 'n' multiplied by the factorial of 'n-1'."
+    },
+    {
+    "Statement": "fac n | n <= 1  =1 | otherwise = n * fac (n-1)",
+    "Description": "Define a function 'fac' that calculates the factorial of 'n'. If 'n' is less than or equal to 1, return 1; otherwise, return 'n' multiplied by the factorial of 'n-1'."
+    },
+    {
+    "Statement": "is_zero 0 = True | is_zero _ = False",
+    "Description": "Define a function 'is_zero' that pattern matches on its argument. If the argument is 0, return True; otherwise, return False."
+    },
+    {
+    "Statement": "fac n = aux n 1 where aux n acc | n <= 1 = acc | otherwise = aux (n-1) (nacc)",
+    "Description": "Define a function 'fac' that calculates the factorial of 'n' using an accumulator. It initializes the accumulator to 1 and calls the auxiliary function 'aux' with 'n' and the accumulator. The 'aux' function recursively calculates the factorial by updating 'n' and 'acc' until 'n' becomes less than or equal to 1, at which point it returns the accumulator."
+    },
+    {
+    "Statement": "[1,2,3,4,5] :: [Integer]",
+    "Description": "Define a list containing integers 1 through 5."
+    },
+    {
+    "Statement": "[]",
+    "Description": "Define an empty list."
+    },
+    {
+    "Statement": "x:xs",
+    "Description": "Represent a list where 'x' is the first element and 'xs' is the rest of the list."
+    },
+    {
+    "Statement": "[1,2,3,4,5]",
+    "Description": "Define a list containing integers 1 through 5 using the cons operator (:)."
+    },
+    {
+    "Statement": "1:2:3:4:5: []",
+    "Description": "Construct a list with integers 1 through 5 using the cons operator (:). Each element is separated by the cons operator, and the list is terminated with an empty list."
+    },
+    {
+    "Statement": "asc :: Int -> Int -> [Int]",
+    "Description": "Define a function 'asc' that generates a list of integers in ascending order."
+    },
+    {
+    "Statement": "asc n m | m<n = [] | m==n = [m] | m>n = n : asc (n+1) m",
+    "Description": "Define the implementation of the 'asc' function using pattern matching. If 'm' is less than 'n', return an empty list. If 'm' equals 'n', return a singleton list containing 'm'. If 'm' is greater than 'n', prepend 'n' to the result of recursively calling 'asc' with 'n+1' and 'm'."
+    },
+    {
+    "Statement": "asc 1 3",
+    "Description": "Call the 'asc' function with arguments 1 and 3, resulting in the list [1,2,3]."
+    },
+    {
+    "Statement": "head :: [a] -> a",
+    "Description": "Return the first element of a list."
+    },
+    {
+    "Statement": "tail :: [a] -> [a]",
+    "Description": "Return all elements of a list except the first one."
+    },
+    {
+    "Statement": "length :: [a] -> Int",
+    "Description": "Return the number of elements in a list."
+    },
+    {
+    "Statement": "init :: [a] -> [a]",
+    "Description": "Return all elements of a list except the last one."
+    },
+    {
+    "Statement": "null :: [a] -> Bool",
+    "Description": "Return True if a list is empty, otherwise False."
+    },
+    {
+    "Statement": "and :: [Bool] -> Bool",
+    "Description": "Return True if all elements in the list are True, otherwise False."
+    },
+    {
+    "Statement": "or :: [Bool] -> Bool",
+    "Description": "Return True if at least one element in the list is True, otherwise False."
+    },
+    {
+    "Statement": "[2x | x <- [1,2,3] ]",
+    "Description": "Generate a list where each element is obtained by doubling each element of the list [1,2,3]."
+    },
+    {
+    "Statement": "[2*x | x <- [1,2,3], x>1 ]",
+    "Description": "Generate a list where each element is obtained by doubling each element of the list [1,2,3], but only if the element is greater than 1."
+    },
+    {
+    "Statement": "[ (x,y) | x <- [1,2,3], y <- ['a','b']]",
+    "Description": "Generate a list of tuples where each tuple contains an element from the list [1,2,3] paired with each element from the list ['a','b']."
+    },
+    {
+    "Statement": "sum :: [Int] -> Int",
+    "Description": "Define a function 'sum' that takes a list of integers and returns their sum."
+    },
+    {
+    "Statement": "sum [] = 0",
+    "Description": "Base case: If the list is empty, the sum is 0."
+    },
+    {
+    "Statement": "sum (x:xs) = x + sum xs",
+    "Description": "Recursive case: If the list is not empty, sum the head of the list 'x' with the sum of the rest of the list 'xs'."
+    },
+    {
+    "Statement": "evens :: [Int] -> [Int]",
+    "Description": "Define a function 'evens' that takes a list of integers and returns a list containing only the even integers."
+    },
+    {
+    "Statement": "evens [] = []",
+    "Description": "Base case: If the list is empty, the result is an empty list."
+    },
+    {
+    "Statement": "evens (x:xs)\n | mod x 2 == 0 = x : evens xs,\n | otherwise = evens xs",
+    "Description": "If the head of the list 'x' is even, add to the result list, and the function is called recursively on the rest of the list 'xs'. If the head of the list 'x' is odd, it is not added to the result list, and the function is called recursively on the rest of the list 'xs'."
+    },
+    {
+    "Statement": "(1,2) :: (Int, Int)",
+    "Description": "Represent a tuple containing two integers."
+    },
+    {
+    "Statement": "fst :: (a,b) -> a",
+    "Description": "Return the first element of a tuple."
+    },
+    {
+    "Statement": "fst (x,) = x",
+    "Description": "Define the function 'fst' which extracts the first element of a tuple."
+    },
+    {
+    "Statement": "snd :: (a,b) -> b",
+    "Description": "Return the second element of a tuple."
+    },
+    {
+    "Statement": "snd (,y) = y",
+    "Description": "Define the function 'snd' which extracts the second element of a tuple."
+    },
+    {
+    "Statement": "let (x,y) = (1,2) in x",
+    "Description": "Bind the tuple (1,2) to variables x and y, then returns the value of x, which is 1."
+    },
+    {
+    "Statement": "addTuples :: [(Int, Int)] -> [Int]",
+    "Description": "Define a function 'addTuples' that takes a list of tuples of integers and returns a list of integers."
+    },
+    {
+    "Statement": "addTuples xs = [ x+y | (x,y) <- xs ]",
+    "Description": "Generate a list by adding the first and second elements of each tuple in the input list."
+    },
+    {
+    "Statement": "addTuples [(1,2), (2,3), (100,100)]",
+    "Description": "Call the function 'addTuples' with a list of tuples [(1,2), (2,3), (100,100)], resulting in [3,5,200]."
+    },
+    {
+    "Statement": "app :: (a -> b) -> a->b",
+    "Description": "Define a higher-order function 'app' that takes a function 'f' and a value 'x' as arguments, and applies 'f' to 'x'."
+    },
+    {
+    "Statement": "app f x = f x",
+    "Description": "Implement the 'app' function by applying the function 'f' to the value 'x'."
+    },
+    {
+    "Statement": "\\x -> x+1",
+    "Description": "Define an anonymous function that takes a parameter 'x' and returns 'x+1'."
+    },
+    {
+    "Statement": "add1 = \\x -> x+1",
+    "Description": "Bind the anonymous function \\x -> x+1 to the name 'add1'."
+    },
+    {
+    "Statement": "\\x y z -> x+y+z",
+    "Description": "Define an anonymous function that takes three parameters 'x', 'y', and 'z', and returns their sum."
+    },
+    {
+    "Statement": "(\\x -> x+1) 1",
+    "Description": "Applly the anonymous function (\\x -> x+1) to the value 1, resulting in 2."
+    },
+    {
+    "Statement": "(\\x y z -> x+y+z) 1 2 3",
+    "Description": "Applly the anonymous function (\\x y z -> x+y+z) to the values 1, 2, and 3, resulting in 6."
+    },
+    {
+    "Statement": "app :: (a -> b) -> a->b",
+    "Description": "Define a higher-order function 'app' that takes a function 'f' and a value 'x' as arguments, and applies 'f' to 'x'."
+    },
+    {
+    "Statement": "app f x = f x",
+    "Description": "Implement the 'app' function by applying the function 'f' to the value 'x'."
+    },
+    {
+    "Statement": "app (\\x -> x+1) 1",
+    "Description": "Applly the anonymous function (\\x -> x+1) to the value 1 using the 'app' function, resulting in 2."
+    },
+    {
+    "Statement": "map :: (a -> b) -> [a] -> [b]",
+    "Description": "Define a function 'map' that takes a function 'f' and a list 'xs' as arguments, and applies 'f' to each element of 'xs', returning a list of the results."
+    },
+    {
+    "Statement": "map (\\x -> x+1) [1,2,3,4,5]",
+    "Description": "Applly the anonymous function (\\x -> x+1) to each element of the list [1,2,3,4,5] using 'map', resulting in [2,3,4,5,6]."
+    },
+    {
+    "Statement": "map (\\(x,y) -> x+y) [(1,2), (2,3), (3,4)]",
+    "Description": "Applly the anonymous function ((x,y) -> x+y) to each tuple in the list [(1,2), (2,3), (3,4)] using 'map', resulting in [3,5,7]."
+    },
+    {
+    "Statement": "filter :: (a -> Bool) -> [a] -> [a]",
+    "Description": "Define a function 'filter' that takes a predicate function 'f' and a list 'xs' as arguments, and returns a list containing only the elements of 'xs' for which 'f' returns True."
+    },
+    {
+    "Statement": "filter (\\x -> x>2) [1,2,3,4,5]",
+    "Description": "Filter the list [1,2,3,4,5] using the predicate function (\\x -> x>2), resulting in [3,4,5]."
+    },
+    {
+    "Statement": "filter (\\(x,y) -> x/=y) [(1,2), (2,2)]",
+    "Description": "Filter the list of tuples [(1,2), (2,2)] using the predicate function ((x,y) -> x/=y), resulting in [(1,2)]."
+    },
+    {
+    "Statement": "f :: a -> b -> c -> d",
+    "Description": "Define a function 'f' that takes three arguments of types 'a', 'b', and 'c', and returns a value of type 'd'."
+    },
+    {
+    "Statement": "f :: a -> (b -> (c -> d))",
+    "Description": "Alternatively define the function 'f' using currying syntax, where it takes an argument of type 'a' and returns a function that takes an argument of type 'b' and returns another function that takes an argument of type 'c' and finally returns a value of type 'd'."
+    },
+    {
+    "Statement": "add :: Int -> Int -> Int",
+    "Description": "Define a function 'add' which takes two 'Int' arguments and returns an 'Int'."
+    },
+    {
+    "Statement": "add x y = x+y",
+    "Description": "Define the 'add' function such that it takes two arguments 'x' and 'y', then returns their sum."
+    },
+    {
+    "Statement": "add x = (\\y -> x+y)",
+    "Description": "Define the 'add' function where it partially applies 'x' to a lambda function taking 'y' as argument, returning their sum."
+    },
+    {
+    "Statement": "add = (\\x -> (\\y -> x+y))",
+    "Description": "Define the 'add' function as a composition of two lambda functions, the outer one taking 'x' and the inner one taking 'y', returning their sum."
+    },
+    {
+    "Statement": "add :: Int -> Int -> Int",
+    "Description": "Define a function 'add' which takes two 'Int' arguments and returns an 'Int'."
+    },
+    {
+    "Statement": "add = (\\x -> (\\y -> x+y))",
+    "Description": "Define the 'add' function as a composition of two lambda functions, the outer one taking 'x' and the inner one taking 'y', returning their sum."
+    },
+    {
+    "Statement": "add 1 :: Int -> Int",
+    "Description": "Partially apply the 'add' function with '1' as the first argument, resulting in a function that takes an 'Int' and returns an 'Int' by adding '1' to its argument."
+    },
+    {
+    "Statement": "map :: (a -> b) -> [a] -> [b]",
+    "Description": "Define a function 'map' which takes a function from 'a' to 'b' and a list of 'a's, returning a list of 'b's."
+    },
+    {
+    "Statement": "doubleList = map (\\x -> 2x)",
+    "Description": "Define the 'doubleList' function using 'map' with a lambda function that doubles its argument."
+    },
+    {
+    "Statement": "descSort = reverse . sort",
+    "Description": "Define 'descSort' as the composition of 'reverse' and 'sort' functions."
+    },
+    {
+    "Statement": "descSort = (\\x -> reverse (sort x))",
+    "Description": "Define 'descSort' as a lambda function that reverses the sorted input list 'x'."
+    },
+    {
+    "Statement": "descSort x = reverse (sort x)",
+    "Description": "Define 'descSort' as a function that takes an argument 'x' and returns the reverse of the sorted 'x'."
+    },
+    {
+    "Statement": "map2D :: (a -> b) -> [[a]] -> [[b]]",
+    "Description": "Declare 'map2D' as a function taking a function from 'a' to 'b' and a list of lists of 'a's, returning a list of lists of 'b's."
+    },
+    {
+    "Statement": "map2D = map . map",
+    "Description": "Define 'map2D' as the composition of 'map' function applied twice."
+    },
+    {
+    "Statement": "map2D x = (\\xs -> map (\\ys -> map x ys) xs)",
+    "Description": "Define 'map2D' as a function taking an argument 'x' and returning a function that maps 'x' over each element of a list of lists."
+    },
+    {
+    "Statement": "f xs = map (\\x -> x+1) (filter (\\x -> x>1) xs)",
+    "Description": "Define the function 'f' which takes a list 'xs' and applies a mapping and filtering operation sequentially."
+    },
+    {
+    "Statement": "f xs = map (\\x -> x+1) $ filter (\\x -> x>1) xs",
+    "Description": "Define the function 'f' where the '$' operator is used to replace the parentheses, indicating that the result of 'filter' is passed as an argument to 'map'."
+    },
+    {
+    "Statement": "sum = foldr (+) 0",
+    "Description": "Define 'sum' as a fold operation using the '+' operator and starting with an initial accumulator of '0'."
+    },
+    {
+    "Statement": "and = foldr (&&) True",
+    "Description": "Define 'and' as a fold operation using the '&&' operator and starting with an initial accumulator of 'True'."
+    },
+    {
+    "Statement": "or = foldr (||) False",
+    "Description": "Define 'or' as a fold operation using the '||' operator and starting with an initial accumulator of 'False'."
+    },
+    {
+    "Statement": "count e = foldr (\\x acc -> if e == x then acc+1 else acc) 0",
+    "Description": "Define 'count' as a fold operation that counts occurrences of 'e' in a list."
+    },
+    {
+    "Statement": "isAll e = foldr (\\x acc -> e == x && acc) True",
+    "Description": "Define 'isAll' as a fold operation that checks if all elements in the list are equal to 'e'."
+    },
+    {
+    "Statement": "length = foldr (\\_ acc -> acc + 1) 0",
+    "Description": "Define 'length' as a fold operation that counts the length of the list."
+    },
+    {
+    "Statement": "map f = foldr ((:) . f) []",
+    "Description": "Define 'map' as a fold operation that applies function 'f' to each element of the list and constructs a new list."
+    },
+    {
+    "Statement": "foldr (\\elem acc -> <term>) <start_acc> <list>",
+    "Description": "Define a fold operation where the function takes an element and an accumulator as arguments, starting with an initial accumulator value, and folding from the right over the list."
+    },
+    {
+    "Statement": "foldr (\\acc elem -> <term>) <start_acc> <list>",
+    "Description": "Define a fold operation where the function takes an accumulator and an element as arguments, starting with an initial accumulator value, and folding from the right over the list."
+    },
+    {
+    "Statement": "data Calculation = Add Int Int | Sub Int Int | Mul Int Int | Div Int Int",
+    "Description": "Define a datatype 'Calculation' with constructors 'Add', 'Sub', 'Mul', and 'Div', each taking two 'Int' arguments."
+    },
+    {
+    "Statement": "calc :: Calculation -> Int",
+    "Description": "Define a function 'calc' which takes a 'Calculation' and returns an 'Int'."
+    },
+    {
+    "Statement": "calc (Add x y) = x+y",
+    "Description": "Define the 'calc' function pattern matching on the 'Add' constructor, returning the sum of 'x' and 'y'."
+    },
+    {
+    "Statement": "calc (Sub x y) = x-y",
+    "Description": "Define the 'calc' function pattern matching on the 'Sub' constructor, returning the difference of 'x' and 'y'."
+    },
+    {
+    "Statement": "calc (Mul x y) = xy",
+    "Description": "Define the 'calc' function pattern matching on the 'Mul' constructor, returning the product of 'x' and 'y'."
+    },
+    {
+    "Statement": "calc (Div x y) = div x y",
+    "Description": "Define the 'calc' function pattern matching on the 'Div' constructor, returning the division of 'x' by 'y'."
+    },
+    {
+    "Statement": "data Person = person {name :: String, age :: Int}",
+    "Description": "Define a datatype 'Person' with record syntax having fields 'name' of type 'String' and 'age' of type 'Int'."
+    },
+    {
+    "Statement": "name :: Person -> String",
+    "Description": "Define a function 'name' which takes a 'Person' and returns their name."
+    },
+    {
+    "Statement": "age :: Person -> Int",
+    "Description": "Define a function 'age' which takes a 'Person' and returns their age."
+    },
+    {
+    "Statement": "greet :: Person -> String",
+    "Description": "Define a function 'greet' which takes a 'Person' and returns a greeting string."
+    },
+    {
+    "Statement": "greet person = \"Hi\" ++ name person",
+    "Description": "Define 'greet' function to concatenate \"Hi\" with the name of the person passed as argument."
+    },
+    {
+    "Statement": "greet (Person name_) = \"Hi\" ++ name_",
+    "Description": "Define 'greet' function pattern matching on 'Person' constructor with 'name_' as its argument, concatenating \"Hi\" with 'name_'."
+    },
+    {
+    "Statement": "greet (Person n_) = \"Hi\" ++ n_",
+    "Description": "Define 'greet' function pattern matching on 'Person' constructor with 'n_' as its argument, concatenating \"Hi\" with 'n_'."
+    },
+    {
+    "Statement": "data Point = D2 {x :: Int, y :: Int} | D3 {x :: Int, y :: Int, z :: Int}",
+    "Description": "Define a datatype 'Point' with two constructors: 'D2' taking 'x' and 'y' coordinates, and 'D3' taking 'x', 'y', and 'z' coordinates."
+    },
+    {
+    "Statement": "x (D2 1 2)",
+    "Description": "Access the 'x' coordinate of a 2D point, yielding '1'."
+    },
+    {
+    "Statement": "x (D3 1 2 3)",
+    "Description": "Access the 'x' coordinate of a 3D point, yielding '1'."
+    },
+    {
+    "Statement": "(+) :: Num a => a -> a -> a",
+    "Description": "Define an operator '+' which takes two arguments of type 'a' belonging to the 'Num' typeclass and returns a value of the same type."
+    },
+    {
+    "Statement": "sum :: Num p => [p] -> p",
+    "Description": "sum is a function which takes a list of values of type 'p' belonging to the 'Num' typeclass and returns a single value of type 'p'."
+    },
+    {
+    "Statement": "sum [] = 0",
+    "Description": "Define the base case of the sum function where an empty list is given, it returns 0."
+    },
+    {
+    "Statement": "sum (x:xs) = x + sum xs",
+    "Description": "Define the recursive case of the sum function where a non-empty list is given. It adds the first element 'x' to the result of recursively summing the rest of the list 'xs'."
+    },
+    {
+    "Statement": "Class Num a where",
+    "Description": "Declare a typeclass 'Num' which represents numeric types."
+    },
+    {
+    "Statement": "(+) :: a -> a -> a",
+    "Description": "Define the addition operation '+' within the 'Num' typeclass which takes two values of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "(-) :: a -> a -> a",
+    "Description": "Define the subtraction operation '-' within the 'Num' typeclass which takes two values of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "() :: a -> a -> a",
+    "Description": "Define the multiplication operation '' within the 'Num' typeclass which takes two values of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "negate :: a -> a",
+    "Description": "Define the negation operation 'negate' within the 'Num' typeclass which takes a value of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "abs :: a -> a",
+    "Description": "Define the absolute value operation 'abs' within the 'Num' typeclass which takes a value of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "signum :: a -> a",
+    "Description": "Define the signum operation 'signum' within the 'Num' typeclass which takes a value of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "fromInteger :: Integer-> a",
+    "Description": "Define a conversion function 'fromInteger' within the 'Num' typeclass which takes an Integer and returns a value of type 'a'."
+    },
+    {
+    "Statement": "Class Show a where",
+    "Description": "Declare a typeclass 'Show' which represents types that can be converted to strings."
+    },
+    {
+    "Statement": "showsPrec :: Int -> a -> ShowS",
+    "Description": "Define a function 'showsPrec' within the 'Show' typeclass which takes an integer and a value of type 'a', and returns a 'ShowS' function."
+    },
+    {
+    "Statement": "show :: a -> String",
+    "Description": "Define a function 'show' within the 'Show' typeclass which takes a value of type 'a' and returns a string representation."
+    },
+    {
+    "Statement": "showList :: [a] -> ShowS",
+    "Description": "Define a function 'showList' within the 'Show' typeclass which takes a list of values of type 'a' and returns a 'ShowS' function."
+    },
+    {
+    "Statement": "data Temperature = C Float | F Float",
+    "Description": "Define a datatype 'Temperature' with two constructors 'C' and 'F' representing temperatures in Celsius and Fahrenheit respectively."
+    },
+    {
+    "Statement": "instance Eq Temperature where",
+    "Description": "Declare an instance of the 'Eq' typeclass for the 'Temperature' datatype."
+    },
+    {
+    "Statement": "(==) (C n) (C m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Celsius. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==) (F n) (F m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Fahrenheit. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==) (C c) (F f) = (1.8c + 32) == f",
+    "Description": "Define the equality operator '==' for comparing a temperature in Celsius with a temperature in Fahrenheit. It returns true if the Celsius temperature, when converted to Fahrenheit, is equal to the given Fahrenheit temperature."
+    },
+    {
+    "Statement": "(==) (F f) (C c) = (1.8c + 32) == f",
+    "Description": "Define the equality operator '==' for comparing a temperature in Fahrenheit with a temperature in Celsius. It returns true if the Celsius temperature, when converted to Fahrenheit, is equal to the given Fahrenheit temperature."
+    },
+    {
+    "Statement": "data Temperature = C Float | F Float deriving (Show, Eq)",
+    "Description": "Define a datatype 'Temperature' with two constructors 'C' and 'F' representing temperatures in Celsius and Fahrenheit respectively. Also, derive instances for the 'Show' and 'Eq' typeclasses for the Temperature datatype."
+    },
+    {
+    "Statement": "Derived equivalence:",
+    "Description": "Describe the derived equivalence for the 'Eq' instance of the 'Temperature' datatype."
+    },
+    {
+    "Statement": "(==) (C n) (C m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Celsius. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==) (F n) (F m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Fahrenheit. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==)  _ _ = False",
+    "Description": "Define a catch-all case for the equality operator '==' which returns false for any other combination of temperatures."
+    },
+    {
+    "Statement": "import Data.Maybe",
+    "Description": "Import the 'Data.Maybe' module to access functions related to the 'Maybe' datatype."
+    },
+    {
+    "Statement": "isJust :: Maybe a -> Bool",
+    "Description": "Define a function 'isJust' which takes a 'Maybe' value and returns 'True' if it is a 'Just' value, otherwise returns 'False'."
+    },
+    {
+    "Statement": "isNothing :: Maybe a -> Bool",
+    "Description": "Define a function 'isNothing' which takes a 'Maybe' value and returns 'True' if it is a 'Nothing' value, otherwise returns 'False'."
+    },
+    {
+    "Statement": "fromJust :: Maybe a -> a",
+    "Description": "Define a function 'fromJust' which extracts the value from a 'Just' constructor. Caution: This function throws an error if given a 'Nothing' value, so it should be used with care."
+    },
+    {
+    "Statement": "fromMaybe :: a -> Maybe a  -> a",
+    "Description": "Define a function 'fromMaybe' which takes a default value and a 'Maybe' value. If the 'Maybe' value is 'Just', it returns the contained value, otherwise it returns the default value."
+    },
+    {
+    "Statement": "putStrLn \"Hello World\"",
+    "Description": "Prints 'Hello World' to the console."
+    },
+    {
+    "Statement": "hw = putStrLn \"Hello World\"",
+    "Description": "Define a function 'hw' that prints 'Hello World' to the console when called."
+    },
+    {
+    "Statement": "hw :: IO ()",
+    "Description": "Declares the type of 'hw' as IO action that returns nothing."
+    },
+    {
+    "Statement": "getLine :: IO String",
+    "Description": "Define an IO action 'getLine' that reads a line of input from the user and returns it as a String."
+    },
+    {
+    "Statement": "greet :: IO ()",
+    "Description": "Declares a function 'greet' that performs IO actions."
+    },
+    {
+    "Statement": "greet = do\n   putStrLn \"What is your name?\"\n   name <- getLine\n   putStrLn (\"Hello \" ++ name ++ \".\")",
+    "Description": "Define 'greet' function which prompts the user for their name, reads the input, and prints a greeting message."
+    },
+    {
+    "Statement": "greet = do\n   putStrLn \"What is your name?\"\n   name <- getLine\n   let uname = map toUpper name\n   putStrLn (\"Hello \" ++ uname ++ \".\")",
+    "Description": "Define 'greet' function which prompts the user for their name, reads the input, converts it to uppercase, and prints a greeting message."
+    },
+    {
+    "Statement": "main :: IO ()",
+    "Description": "Declares the main function."
+    },
+    {
+    "Statement": "main = do\n i <- getLine\n if i /= \"quit\" then do\n    putStrLn (\"Input: \"++ i)\n    main\n else\n    return ()",
+    "Description": "Define the main function which repeatedly prompts the user for input until 'quit' is entered, then terminates."
+    },
+    {
+    "Statement": "count :: Int -> Int -> IO ()",
+    "Description": "Declares a function 'count' that takes two integers and performs IO actions."
+    },
+    {
+    "Statement": "count n m = do\n  putStrLn (show n)\n  if n<m then\n      count (n+1) m\n  else\n      return ()",
+    "Description": "Define 'count' function which prints numbers from 'n' to 'm', inclusively."
+    },
+    {
+    "Statement": "f :: [a] -> [a]",
+    "Description": "Declare a function f which takes a list of type a and returns a list of the same type."
+    },
+    {
+    "Statement": "f = reverse . sort",
+    "Description": "Define f as a composition of reverse and sort functions."
+    },
+    {
+    "Statement": "add :: (Num d) => d -> d -> [d] -> [d]",
+    "Description": "Declares a function add which takes three arguments of type d and returns a list of type [d]."
+    },
+    {
+    "Statement": "add x y z = (x + y) : z",
+    "Description": "Define the add function to add x and y, then prepend the result to list z."
+    },
+    {
+    "Statement": "f :: Ord a => [a] -> [a]",
+    "Description": "Specify the type of f to be a function taking a list of Ord type a and returning a list of the same type."
+    },
+    {
+    "Statement": "f X = X : X",
+    "Description": "Define a function f which takes an argument X and prepends it twice to itself, which results in a type error due to infinite recursion."
+    },
+    {
+    "Statement": "class Applicative m => Monad (m :: * -> *) where",
+    "Description": "Declare the Monad type class, which extends the Applicative type class."
+    },
+    {
+    "Statement": "  (>>=) :: m a -> (a -> m b) -> m b",
+    "Description": "Define the bind operator (>>=) which sequences two monadic actions."
+    },
+    {
+    "Statement": "  (>>) :: m a -> m b -> m b",
+    "Description": "Define the sequencing operator (>>), which discards the result of the first action and executes the second action."
+    },
+    {
+    "Statement": "  return :: a -> m a",
+    "Description": "Wrap a value into the monadic context."
+    },
+    {
+    "Statement": "  fail :: String -> m a",
+    "Description": "Handle failure within a monadic computation."
+    },
+    {
+    "Statement": "  {-# MINIMAL (>>=) #-}",
+    "Description": "Specify that the bind operator is the minimal complete definition for a Monad instance."
+    },
+    {
+    "Statement": "instance Monad (Either e)",
+    "Description": "Define a Monad instance for the Either type constructor."
+    },
+    {
+    "Statement": "instance Monad []",
+    "Description": "Define a Monad instance for lists."
+    },
+    {
+    "Statement": "instance Monad Maybe",
+    "Description": "Define a Monad instance for Maybe type."
+    },
+    {
+    "Statement": "instance Monad IO",
+    "Description": "Define a Monad instance for IO actions."
+    },
+    {
+    "Statement": "instance Monad ((->))",
+    "Description": "Define a Monad instance for functions."
+    },
+    {
+    "Statement": "instance Monad a => Monad ((,) a)",
+    "Description": "Define a Monad instance for pairs."
+    },
+    {
+    "Statement": "(>>=) :: Monad m => m a -> (a -> m b) -> m b",
+    "Description": "Define the bind operator (>>=) which sequences two monadic actions."
+    },
+    {
+    "Statement": "Just 1 >>= (\\x -> Just x)",
+    "Description": "Bind the value 1 wrapped in a Just context to the function (\\x -> Just x), resulting in Just 1."
+    },
+    {
+    "Statement": "Nothing >>= (\\x -> Just x)",
+    "Description": "Bind Nothing to the function (\\x -> Just x), resulting in Nothing."
+    },
+    {
+    "Statement": "maybeadd :: Num b => Maybe b -> b -> Maybe b",
+    "Description": "Define a function maybeadd that adds a value to a Maybe-wrapped value."
+    },
+    {
+    "Statement": "maybeadd mx y = mx >>= (\\x -> Just $ x+y)",
+    "Description": "Use bind operator `(>>=)` to extract the value from `mx`, adds `y` to it, and wraps the result in a Just context."
+    },
+    {
+    "Statement": "maybeadd Nothing 1",
+    "Description": "Applly `maybeadd` function with `Nothing` and `1`, resulting in Nothing."
+    },
+    {
+    "Statement": "maybeadd (Just 1) 1",
+    "Description": "Applly `maybeadd` function with `Just 1` and `1`, resulting in Just 2."
+    },
+    {
+    "Statement": "maybeadd :: Num b => Maybe b -> Maybe b -> Maybe b",
+    "Description": "Redefine `maybeadd` to accept two Maybe-wrapped values and add them."
+    },
+    {
+    "Statement": "maybeadd mx my = mx >>= (\\x -> my >>= (\\y -> Just $ x+y))",
+    "Description": "Use nested bind operators to sequentially extract values from `mx` and `my`, adds them, and wraps the result in a Just context."
+    },
+    {
+    "Statement": "maybeadd Nothing (Just 1)",
+    "Description": "Applly `maybeadd` function with `Nothing` and `Just 1`, resulting in Nothing."
+    },
+    {
+    "Statement": "maybeadd (Just 2) (Just 1)",
+    "Description": "Applly `maybeadd` function with `Just 2` and `Just 1`, resulting in Just 3."
+    },
+    {
+    "Statement": "monadd :: (Monad m, Num b) => m b -> m b -> m b",
+    "Description": "Define a function `monadd` that adds two monadic values."
+    },
+    {
+    "Statement": "monadd mx y = mx >>= (\\x -> my >>= (\\y -> return $ x+y))",
+    "Description": "Use bind operator `(>>=)` and `return` to sequentially extract values from `mx` and `my`, add them, and wrap the result in the monadic context."
+    },
+    {
+    "Statement": "monadd mx my = do",
+    "Description": "Define `monadd"
+    },
+    {
+    "Statement": "instance Monad Maybe where",
+    "Description": "Declare an instance of the Monad type class for the Maybe type."
+    },
+    {
+    "Statement": "m >>= f = case m of",
+    "Description": "Define a function (>>=) which takes a Maybe value m and a function f, and performs a case analysis on m."
+    },
+    {
+    "Statement": "Nothing -> Nothing",
+    "Description": "If m is Nothing, then return Nothing."
+    },
+    {
+    "Statement": "Just x -> f x",
+    "Description": "If m is Just x, then apply the function f to the value x inside the Just constructor."
+    },
+    {
+    "Statement": "return v = Just v",
+    "Description": "Define the return function for the Maybe monad, which takes a value v and wraps it in a Just constructor."
+    },
+    {
+    "Statement": "(>>) :: Monad m => m a -> m b -> m b",
+    "Description": "Define the (>>) operator for any monad, taking two monadic values of types m a and m b respectively, and producing a monadic value of type m b."
+    },
+    {
+    "Statement": "m>>n = m >>= \\_-> n",
+    "Description": "Define the implementation of (>>) operator, which sequences two monadic computations. It applies the first computation m, discards its result using a lambda function, and then proceeds to execute the second computation n."
+    },
+    {
+    "Statement": "Nothing >> Just 1",
+    "Description": "Perform the (>>) operation with Nothing and Just 1, resulting in Nothing."
+    },
+    {
+    "Statement": "Just 1 >> Just 2",
+    "Description": "Perform the (>>) operation with Just 1 and Just 2, resulting in Just 2."
+    },
+    {
+    "Statement": "Just 1 >> Nothing",
+    "Description": "Perform the (>>) operation with Just 1 and Nothing, resulting in Nothing."
+    },
+    {
+    "Statement": "prop a b = (a+b) == (b+a)",
+    "Description": "Define a property named prop that checks if the sum of two numbers a and b is equal to the sum of b and a."
+    },
+    {
+    "Statement": "prop xs = (length $ tail xs) == ((length xs) -1)",
+    "Description": "Define a property named prop that checks if the length of the tail of a list xs is equal to the length of xs minus one."
+    },
+    {
+    "Statement": "prop xs = not (null xs) ==> (length xs) -1)",
+    "Description": "Define a property named prop that states if xs is not null, then the length of xs minus one is equal to itself."
+    },
+    {
+    "Statement": "prop xs = not (null xs) ==> (length $ tail xs) === ((length xs) -1)",
+    "Description": "Define a property named prop that states if xs is not null, then the length of the tail of xs is equal to the length of xs minus one."
+    },
+    {
+    "Statement": "rev xs = rev_aux [] xs\nwhere\n  rev_aux acc [] = acc\n  rev_aux acc (x:xs) =  rev_aux (x:acc) xs",
+    "Description": "Define a function rev that reverses a list xs using an auxiliary function rev_aux. The rev_aux function accumulates elements in reverse order into an accumulator list acc, and once the input list becomes empty, it returns the accumulator."
+    },
+    {
+    "Statement": "propRev xs = reverse xs === rev xs",
+    "Description": "Define a property named propRev that checks if reversing a list xs using the reverse function is equal to reversing it using the custom rev function."
+    },
+    {
+    "Statement": "prop k v m = lookup k ((k,v): m) === Just v\n   where types = (k :: Int, v :: Int)",
+    "Description": "Define a property named prop that checks if looking up a key k in a list that contains a tuple (k,v) results in Just v."
+    },
+    {
+    "Statement": "ones = 1 : ones",
+    "Description": "Define an infinite list named ones where each element is 1 followed by itself, creating an infinite cycle."
+    },
+    {
+    "Statement": "ones = 1 : 1 : ones",
+    "Description": "Define an infinite list named ones where the first two elements are both 1, followed by itself, creating an infinite cycle."
+    },
+    {
+    "Statement": "ones = 1 : ones\ntail ones\n==> 1 : ones ",
+    "Description": "Define an infinite list named ones where each element is 1 followed by itself. Then, take the tail of the list ones, resulting in a list with all elements same as ones except the first one."
+    },
+    {
+    "Statement": "ones = 1 : ones\ntake 5 (map (*2) ones)\n   ==> [2,2,2,2,2] ",
+    "Description": "Define an infinite list named ones where each element is 1 followed by itself. Then, take the first 5 elements of the list obtained by doubling each element of ones."
+    },
+    {
+    "Statement": "nat = asc 1\n where asc n = n: (asc $ n+1)",
+    "Description": "Define an infinite list named nat where each element is an ascending sequence starting from 1."
+    },
+    {
+    "Statement": "evens = map (*2) nat\nodds = filter (\\x -> mod x 2 == 0) nat",
+    "Description": "Define an infinite list named evens where each element is twice the corresponding element in the list nat. Also, define an infinite list named odds where each element is an even number from the list nat using filtering."
+    },
+    {
+    "Statement": "data Either a b = Left a | Right b",
+    "Description": "Define a data type 'Either' which represents a value of one of two possible types, 'a' or 'b'."
+    },
+    {
+    "Statement": "type SomeData = Either Int String,[Left 1, Right \"Hello\"] :: [SomeData]",
+    "Description": "Define a type synonym 'SomeData' for 'Either Int String', and creates a list containing a 'Left' value with 1 and a 'Right' value with 'Hello'."
+    },
+    {
+    "Statement": "import Data.Either",
+    "Description": "Imports the 'Data.Either' module."
+    },
+    {
+    "Statement": "lefts :: [Either a b] -> [a]",
+    "Description": "Define a function 'lefts' that takes a list of 'Either' values and returns a list containing only the 'Left' values."
+    },
+    {
+    "Statement": "rights :: [Either a b] -> [b]",
+    "Description": "Define a function 'rights' that takes a list of 'Either' values and returns a list containing only the 'Right' values."
+    },
+    {
+    "Statement": "isleft :: Either a b -> Bool",
+    "Description": "Define a function 'isleft' that checks whether the given 'Either' value is of the 'Left' type."
+    },
+    {
+    "Statement": "isright :: Either a b -> Bool",
+    "Description": "Define a function 'isright' that checks whether the given 'Either' value is of the 'Right' type."
+    },
+    {
+    "Statement": "fromleft :: a -> Either a b -> a",
+    "Description": "Define a function 'fromleft' that extracts the value from a 'Left' constructor or returns a default value."
+    },
+    {
+    "Statement": "fromright :: b -> Either a b -> b",
+    "Description": "Define a function 'fromright' that extracts the value from a 'Right' constructor or returns a default value."
+    },
+    {
+    "Statement": "either :: (a ->c) -> (b -> c) -> Either a b -> c",
+    "Description": "Define the 'either' function which takes two functions and an 'Either' value, applies the first function to the 'Left' value or the second function to the 'Right' value, and returns the result."
+    },
+    {
+    "Statement": "f = either (\\l -> \"Number\") (\\r -> r)",
+    "Description": "Define a function 'f' which uses the 'either' function to map 'Left' values to 'Number' and 'Right' values to themselves."
+    },
+    {
+    "Statement": "f (Left 1)",
+    "Description": "Applies 'f' to a 'Left' value with 1, resulting in 'Number'."
+    },
+    {
+    "Statement": "f (Right \"Hello\")",
+    "Description": "Applies 'f' to a 'Right' value with 'Hello', resulting in 'Hello'."
+    },
+    {
+    "Statement": "data Either a b = Left a | Right b",
+    "Description": "Define a data type 'Either' which represents a value of one of two possible types, 'a' or 'b', typically used for error handling where 'Left' indicates an error and 'Right' indicates a successful result."
+    },
+    {
+    "Statement": "data Maybe a = Nothing | just a",
+    "Description": "Define a data type 'Maybe' which represents an optional value, where 'Nothing' indicates absence of a value and 'Just' wraps a value of type 'a'."
+    },
+    {
+    "Statement": "import Module",
+    "Description": "Imports all the entities (functions, types, etc.) from the module 'Module' into the current namespace."
+    },
+    {
+    "Statement": "import Module (name1, name2)",
+    "Description": "Imports only the specified entities 'name1' and 'name2' from the module 'Module' into the current namespace."
+    },
+    {
+    "Statement": "import Module hiding (name1, name2)",
+    "Description": "Imports all entities from the module 'Module' into the current namespace except for 'name1' and 'name2'."
+    },
+    {
+    "Statement": "import qualified Module",
+    "Description": "Imports all entities from the module 'Module' but qualifies them with the module name, so they need to be accessed using the module name prefix."
+    },
+    {
+    "Statement": "Module.name",
+    "Description": "Accesses the entity 'name' from the module 'Module'."
+    },
+    {
+    "Statement": "import Module as NewName",
+    "Description": "Imports all entities from the module 'Module' into the current namespace but renames the module to 'NewName', allowing access to its entities using the new name."
+    },
+    {
+    "Statement": "data DataType = A | B | C\nimport Module (dataType(...))",
+    "Description": "Define a data type 'DataType' with constructors 'A', 'B', and 'C'. Then imports only the specified data type constructors from the module 'Module'."
+    },
+    {
+    "Statement": "or\nimport Module (dataType(A,C))",
+    "Description": "Imports only the specified data type constructors 'A' and 'C' from the module 'Module'."
+    },
+    {
+    "Statement": "import System.Environment",
+    "Description": "Import the System.Environment module to access environment-related functions."
+    },
+    {
+    "Statement": "import System.Exit",
+    "Description": "Import the System.Exit module to handle program exit."
+    },
+    {
+    "Statement": "progname arg1 arg2 arg3 arg4",
+    "Description": "Define a program with four arguments."
+    },
+    {
+    "Statement": "greet Hello",
+    "Description": "Define a function 'greet' that takes a string argument and prints 'Hello user' with the argument appended."
+    },
+    {
+    "Statement": ":> greet Hello",
+    "Description": "Invoke the 'greet' function with the argument 'Hello'."
+    },
+    {
+    "Statement": "getProgname :: IO String",
+    "Description": "Define a function 'getProgname' which returns the program name as an IO action."
+    },
+    {
+    "Statement": "getProgname = System.Environment.getProgname",
+    "Description": "Assign the 'getProgname' function to retrieve the program name."
+    },
+    {
+    "Statement": "withArgs :: [String] -> IO a -> IO a",
+    "Description": "Define a function 'withArgs' which takes a list of strings and an IO action, and executes the action with the specified arguments."
+    },
+    {
+    "Statement": "withArgs args action = System.Environment.withArgs args action",
+    "Description": "Implement the 'withArgs' function using 'System.Environment.withArgs'."
+    },
+    {
+    "Statement": "WithProgName :: String -> IO a -> IO a",
+    "Description": "Define a function 'WithProgName' which takes a string representing a new program name and an IO action, and executes the action with the specified program name."
+    },
+    {
+    "Statement": "WithProgName name action = System.Environment.withProgName name action",
+    "Description": "Implement the 'WithProgName' function using 'System.Environment.withProgName'."
+    },
+    {
+    "Statement": "data ExitCode = ExitSuccess | ExitFailure Int",
+    "Description": "Define a custom data type 'ExitCode' which represents the status of program termination, either success or failure with an integer code."
+    },
+    {
+    "Statement": "exitWith :: ExitCode -> IO a",
+    "Description": "Define a function 'exitWith' which takes an ExitCode and performs an IO action that terminates the program with the specified exit code."
+    },
+    {
+    "Statement": "exitWith code = System.Exit.exitWith code",
+    "Description": "Implement the 'exitWith' function using 'System.Exit.exitWith'."
+    },
+    {
+    "Statement": "exitFailure :: IO a",
+    "Description": "Define a function 'exitFailure' which performs an IO action that terminates the program with a failure status."
+    },
+    {
+    "Statement": "exitFailure = System.Exit.exitFailure",
+    "Description": "Implement the 'exitFailure' function using 'System.Exit.exitFailure'."
+    },
+    {
+    "Statement": "exitSuccess :: IO a",
+    "Description": "Define a function 'exitSuccess' which performs an IO action that terminates the program with a success status."
+    },
+    {
+    "Statement": "exitSuccess = System.Exit.exitSuccess",
+    "Description": "Implement the 'exitSuccess' function using 'System.Exit.exitSuccess'."
+    },
+    {
+    "Statement": "die :: String -> IO a",
+    "Description": "Define a function 'die' which takes a string argument and performs an IO action that terminates the program with a failure status and prints the specified string as an error message."
+    },
+    {
+    "Statement": "die msg = do { putStrLn msg; exitFailure }",
+    "Description": "Implement the 'die' function to print the error message followed by exiting with failure status."
+    },
+    {
+    "Statement": "f a b = if a 'mod' 2 == 0 then a else b",
+    "Description": "Define a function f that takes two arguments a and b, if a is even, return a, otherwise return b."
+    },
+    {
+    "Statement": "f (1+1) (2+1)",
+    "Description": "Apply the function f with arguments 2 and 3."
+    },
+    {
+    "Statement": "if (1+1) 'mod' 2 == 0 then (1+1) else (2+1)",
+    "Description": "Evaluate the expression using if-then-else, if (1+1) is even, return (1+1), otherwise return (2+1)."
+    },
+    {
+    "Statement": "if 2 'mod' 2 == 0 then 2 else (2+1)",
+    "Description": "Evaluate the expression using if-then-else, if 2 is even, return 2, otherwise return (2+1)."
+    },
+    {
+    "Statement": "foldl' (+) 0 [1,2,3]",
+    "Description": "Perform a strict left fold using the (+) operator and initial value 0 over the list [1,2,3]."
+    },
+    {
+    "Statement": "seq :: a -> b -> b",
+    "Description": "Define a function seq that takes two arguments a and b, and returns b."
+    },
+    {
+    "Statement": "seq a b = b",
+    "Description": "Define the seq function to return its second argument."
+    },
+    {
+    "Statement": "foldl' :: (a -> b -> a) -> a -> [b] -> a",
+    "Description": "Define the type signature for the foldl' function, which takes a function (a -> b -> a), an initial value of type a, and a list of elements of type b, and returns a value of type a."
+    },
+    {
+    "Statement": "foldl' _ z [] = z",
+    "Description": "Define the base case for foldl', which returns the initial value z when applied to an empty list."
+    },
+    {
+    "Statement": "foldl' f z (x:xs) = let z' = f z x in z' 'seq' foldl' f z' xs",
+    "Description": "Define the recursive case for foldl', which applies the function f to the initial value z and the head of the list x to get z', evaluates z' strictly using seq, and then recursively calls foldl' with z' as the new initial value and the remaining list xs."
+    },
+    {
+    "Statement": "($) :: (a -> b) -> a -> b",
+    "Description": "Define the type signature for the ($) operator, which takes a function (a -> b) and a value of type a, and returns a value of type b."
+    },
+    {
+    "Statement": "f $ x = f x",
+    "Description": "Define the ($) operator to apply the function f to the value x."
+    },
+    {
+    "Statement": "($!) :: (a -> b) -> a -> b",
+    "Description": "Define the type signature for the ($!) operator, which takes a function (a -> b) and a value of type a, and returns a value of type b."
+    },
+    {
+    "Statement": "f $! x = x 'seq' f x",
+    "Description": "Define the ($!) operator to evaluate the value x strictly using seq before applying the function f to it."
+    },
+    {
+    "Statement": "someAction = do ... ... ... return $! f x",
+    "Description": "Perform some actions, and then evaluate the result of f x strictly before returning it."
+    },
+    {
+    "Statement": "import Control.Exception",
+    "Description": "Import the Control.Exception module."
+    },
+    {
+    "Statement": "ghci> :i Exception",
+    "Description": "View the information about the Exception class in GHCi."
+    },
+    {
+    "Statement": "data MyError = ErrorA | ErrorB deriving Show",
+    "Description": "Define a data type MyError with two constructors ErrorA and ErrorB, and derive the Show instance for it."
+    },
+    {
+    "Statement": "instance Exception MyError",
+    "Description": "Make the MyError data type an instance of the Exception class."
+    },
+    {
+    "Statement": "ghci> throw ErrorA",
+    "Description": "Throw an exception of type ErrorA in GHCi."
+    },
+    {
+    "Statement": "catch :: Exception e => IO a -> (e -> IO a) -> IO a",
+    "Description": "Define the type signature for the catch function, which takes an IO action and a handler function (e -> IO a), and returns an IO action that either executes the original action or the handler if an exception of type e is thrown."
+    },
+    {
+    "Statement": "import Control.Exception",
+    "Description": "Import the Control.Exception module."
+    },
+    {
+    "Statement": "data MyError = Error deriving Show",
+    "Description": "Define a data type MyError with a single constructor Error, and derive the Show instance for it."
+    },
+    {
+    "Statement": "instance Exception MyError",
+    "Description": "Make the MyError data type an instance of the Exception class."
+    },
+    {
+    "Statement": "failing :: IO ()",
+    "Description": "Define a function failing of type IO () that throws an exception of type Error."
+    },
+    {
+    "Statement": "failing = do throw Error",
+    "Description": "Define the failing function to throw an exception of type Error."
+    },
+    {
+    "Statement": "main :: IO ()",
+    "Description": "Define a function main of type IO ()."
+    },
+    {
+    "Statement": "main = do catch failing (\\e -> do putStrLn \"Something went wrong!\")",
+    "Description": "Define the main function to catch any exceptions of type MyError thrown by failing, and print a message \"Something went wrong!\" if an exception is caught."
+    },
+    {
+    "Statement": "import Control.Exception",
+    "Description": "Import the Control.Exception module."
+    },
+    {
+    "Statement": "data MyError = Error deriving Show",
+    "Description": "Define a data type MyError with a single constructor Error, and derive the Show instance for it."
+    },
+    {
+    "Statement": "instance Exception MyError",
+    "Description": "Make the MyError data type an instance of the Exception class."
+    },
+    {
+    "Statement": "failing :: IO ()",
+    "Description": "Define a function failing of type IO () that throws an exception of type Error."
+    },
+    {
+    "Statement": "failing = do throw Error",
+    "Description": "Define the failing function to throw an exception of type Error."
+    },
+    {
+    "Statement": "main :: IO ()",
+    "Description": "Define a function main of type IO ()."
+    },
+    {
+    "Statement": "main = do catch failing (\\(e :: MyError) -> do putStrLn \"Something went wrong!\")",
+    "Description": "Define the main function to catch any exceptions of type MyError thrown by failing, and print a message \"Something went wrong!\" if an exception is caught. The handler function is explicitly typed to match the MyError type."
+    },
+    {
+    "Statement": "try :: Exception e => IO a -> IO (Either e a)",
+    "Description": "Create an IO action that attempts to run the given IO action, returning either an exception of type e or the result of type a, wrapped in the Either data type."
+    },
+    {
+    "Statement": "tryJust :: Exception e => (e -> Maybe b) -> IO a > IO (Either b a)",
+    "Description": "Create an IO action that attempts to run the given IO action, using the provided function to filter the exceptions. If the function returns Just b, the action returns Left b, otherwise it returns Right a."
+    },
+    {
+    "Statement": "finally :: IO a -> IO b -> IO a",
+    "Description": "Create an IO action that runs the first IO action, then runs the second IO action, and finally returns the result of the first IO action, regardless of whether an exception was thrown or not."
+    },
+    {
+    "Statement": "forkIO :: IO () -> IO ThreadId",
+    "Description": "Create a new concurrent thread that runs the given IO action, returning the ThreadId of the newly created thread."
+    },
+    {
+    "Statement": "f :: Int -> Int -> IO ()\nf a b = do\n  let x = a+b\n  putStrLn $! show x",
+    "Description": "Define a function f that takes two integers a and b, computes their sum x, and prints the value of x using putStrLn."
+    },
+    {
+    "Statement": "newEmptyMVar :: IO (MVar a)",
+    "Description": "Create a new empty MVar, which is a synchronized mutable variable that can be used for communication between threads."
+    },
+    {
+    "Statement": "newMVar :: a -> IO (MVar a)",
+    "Description": "Create a new MVar with an initial value of type a."
+    },
+    {
+    "Statement": "takeMVar :: MVar a -> IO a",
+    "Description": "Take the value from the given MVar, blocking until a value is available."
+    },
+    {
+    "Statement": "putMVar :: MVar a -> a -> IO ()",
+    "Description": "Put a value of type a into the given MVar, blocking until the MVar is empty."
+    },
+    {
+    "Statement": "f :: Int -> Int -> MVar Int -> IO ()\nf a b mVar = do\n  putMVar mVar $! (a+b)",
+    "Description": "Define a function f that takes two integers a and b, computes their sum, and puts the sum into the given MVar."
+    },
+    {
+    "Statement": "newChan :: IO (Chan a)",
+    "Description": "Create a new unbounded channel of type Chan a, which can be used for communication between threads."
+    },
+    {
+    "Statement": "writeChan :: Chan a -> a -> IO ()",
+    "Description": "Write a value of type a to the given channel, blocking until there is a receiver."
+    },
+    {
+    "Statement": "readChan :: Chan a -> IO a",
+    "Description": "Read a value of type a from the given channel, blocking until there is a sender."
+    },
+    {
+    "Statement": "square :: Int -> Int\nsquare x = x * x",
+    "Description": "Define a function square that takes an integer x and returns its square."
+    },
+    {
+    "Statement": "f :: Int -> Int -> Int\nf x y = y + square x",
+    "Description": "Define a function f that takes two integers x and y, computes the square of x using the square function, and returns the sum of y and the square of x."
+    },
+    {
+    "Statement": "rpar :: Strategy a",
+    "Description": "Create a Strategy that sparks a new thread to compute the given value in parallel."
+    },
+    {
+    "Statement": "rseq :: Strategy a",
+    "Description": "Create a Strategy that evaluates the given value to weak head normal form."
+    },
+    {
+    "Statement": "rdeepseq :: NFData a => Strategy a",
+    "Description": "Create a Strategy that evaluates the given value to normal form, fully evaluating all sub-expressions."
+    },
+    {
+    "Statement": "runEval :: Eval a -> a",
+    "Description": "Run the given Eval computation and return its result."
+    },
+    {
+    "Statement": "runEval $ do\n  a <- rpar (f x)\n  b <- rseq (f y)\n  rseq a\n  rseq b\n  return (a,b)",
+    "Description": "Run a parallel computation that evaluates (f x) and (f y) in parallel, and returns a pair (a, b) where a and b are the results of the parallel computations."
+    },
+    {
+    "Statement": "class Semigroup a where\n  (<>) :: a -> a -> a",
+    "Description": "Define a class Semigroup that represents types that have an associative binary operation (<>)."
+    },
+    {
+    "Statement": "instance Semigroup (Either a b)",
+    "Description": "Provide an instance of Semigroup for the Either data type, where the (<>) operation is defined to prefer the Right value if both inputs are Right, and otherwise return the non-Right value."
+    },
+    {
+    "Statement": "instance Semigroup [a]",
+    "Description": "Provide an instance of Semigroup for lists, where the (<>) operation is defined as list concatenation (++)."
+    },
+    {
+    "Statement": "class Semigroup a => Monoid a where\n  mempty :: a\n  mappend :: a -> a -> a\n  mconcat :: [a] -> a",
+    "Description": "Define a class Monoid that represents types that have a Semigroup instance and an identity element mempty, with a binary operation mappend and a function mconcat that combines a list of elements using the binary operation."
+    },
+    {
+    "Statement": "instance Monoid [a] where\n  mempty = []\n  mconcat xss = [x | xs <- xss, x <- xs]",
+    "Description": "Provide an instance of Monoid for lists, where mempty is the empty list, and mconcat concatenates a list of lists by flattening them into a single list."
+    },
+    {
+    "Statement": "newtype Sum a = Sum { getSum :: a }\nderiving (Eq, Ord, ..... )",
+    "Description": "Define a new data type Sum that wraps a value of type a, and derives various type class instances for it, such as Eq, Ord, etc."
+    },
+    {
+    "Statement": "newtype Product a = Product { getProduct :: a }\nderiving (Eq, Ord, ..... )",
+    "Description": "Define a new data type Product that wraps a value of type a, and derives various type class instances for it, such as Eq, Ord, etc."
+    },
+    {
+    "Statement": "instance Num a => Semigroup (Sum a) where\n  (<>) = coerce ((+) :: a -> a -> a)\n  stimes n (Sum a) = Sum (fromIntegral n * a)",
+    "Description": "Provide an instance of Semigroup for the Sum data type, where the (<>) operation is defined as the addition of the wrapped values, and stimes is defined as scalar multiplication of the wrapped value by an integer."
+    },
+    {
+    "Statement": "instance Num a => Monoid (Sum a) where\n  mempty = Sum 0",
+    "Description": "Provide an instance of Monoid for the Sum data type, where the mempty is the Sum wrapping 0."
+    },
+    {
+    "Statement": "(Sum 500) <> (Sum 400) <> (Sum 100)",
+    "Description": "Compute the result of combining three Sum values using the Semigroup (<>) operation, which should be Sum {getSum = 1000}."
+    },
+    {
+    "Statement": "newtype Product a = Product { getProduct :: a }",
+    "Description": "Define a new data type called 'Product' with a single constructor 'Product' that wraps a value of type 'a'. The 'getProduct' function extracts the value of type 'a' from the 'Product' constructor."
+    },
+    {
+    "Statement": "deriving (Eq, Ord, ..... )",
+    "Description": "Derive instances of various type classes (such as 'Eq', 'Ord', etc.) for the 'Product' data type."
+    },
+    {
+    "Statement": "instance Num a => Semigroup (Product a) where",
+    "Description": "Define a 'Semigroup' instance for the 'Product' data type, constrained by the 'Num' type class constraint on 'a'."
+    },
+    {
+    "Statement": "(<>) = coerce ((+) :: a -> a -> a)",
+    "Description": "Define the '<>' operator for the 'Semigroup' instance of 'Product a' by converting the '(+)' function for type 'a' to the appropriate type using 'coerce'."
+    },
+    {
+    "Statement": "stimes n (Product a) = Product (a ^ n)",
+    "Description": "Define the 'stimes' function that takes an integer 'n' and a 'Product a' value, and returns a new 'Product' value where the wrapped value 'a' is raised to the power of 'n'."
+    },
+    {
+    "Statement": "instance Num a => Monoid (Product a) where",
+    "Description": "Define a 'Monoid' instance for the 'Product' data type, constrained by the 'Num' type class constraint on 'a'."
+    },
+    {
+    "Statement": "mempty = Product 1",
+    "Description": "Define the 'mempty' value for the 'Monoid' instance of 'Product a' as a 'Product' value wrapping the number '1'."
+    },
+    {
+    "Statement": "prop x y = (( x <> y) <> mempty) === (x <> (y <> mempty))",
+    "Description": "Define a property 'prop' that checks if the associative law holds for the 'Semigroup' instance of 'Product a' by comparing the results of two equivalent expressions involving '<>' and 'mempty'."
+    },
+    {
+    "Statement": "where types = (x :: [Int], y :: [Int])",
+    "Description": "Specify the types of 'x' and 'y' as lists of integers for the 'prop' function."
+    },
+    {
+    "Statement": "class Functor (f :: * -> *) where",
+    "Description": "Define a type class 'Functor' with a kind constraint '(* -> *)' representing type constructors that take one type argument."
+    },
+    {
+    "Statement": "fmap :: (a -> b) -> f a -> f b",
+    "Description": "Declare the 'fmap' function signature for the 'Functor' type class, which takes a function '(a -> b)' and a value of type 'f a', and returns a value of type 'f b'."
+    },
+    {
+    "Statement": "(<$) :: a -> f b -> f a",
+    "Description": "Declare the '(<$)' operator signature for the 'Functor' type class, which takes a value of type 'a' and a value of type 'f b', and returns a value of type 'f a'."
+    },
+    {
+    "Statement": "class Functor f => Monoidal f where",
+    "Description": "Define a type class 'Monoidal' with a superclass constraint 'Functor f', representing monoidal functors."
+    },
+    {
+    "Statement": "unit :: f ()",
+    "Description": "Declare the 'unit' function signature for the 'Monoidal' type class, which returns a value of type 'f ()' representing the monoidal unit."
+    },
+    {
+    "Statement": "(**) :: f a -> f b -> f (a,b)",
+    "Description": "Declare the '(**)' operator signature for the 'Monoidal' type class, which takes two values of types 'f a' and 'f b', and returns a value of type 'f (a,b)' representing their monoidal product."
+    },
+    {
+    "Statement": "instance Monoidal [] where",
+    "Description": "Define a 'Monoidal' instance for the list type constructor '[]'."
+    },
+    {
+    "Statement": "unit = [()]",
+    "Description": "Define the 'unit' value for the 'Monoidal' instance of '[]' as a list containing the unit value '()'."
+    },
+    {
+    "Statement": "(**) as bs = [(a,b) | a <- as, b <- bs]",
+    "Description": "Define the '(**)' operator for the 'Monoidal' instance of '[]' as a list comprehension that combines all pairs of elements from the two input lists 'as' and 'bs' into tuples '(a,b)'."
+    },
+    {
+    "Statement": "cross :: a -> b -> (a,b)",
+    "Description": "Define the 'cross' function that takes two values 'a' and 'b', and returns a tuple '(a,b)' containing them."
+    },
+    {
+    "Statement": "cross = (,)",
+    "Description": "Implement the 'cross' function using the tuple constructor '(,)'."
+    },
+    {
+    "Statement": "(<**>) :: Monoidal f => f (a -> b) -> f a -> f b",
+    "Description": "Declare the '(<**>)' operator signature for the 'Monoidal' type class, which takes a value of type 'f (a -> b)' and a value of type 'f a', and returns a value of type 'f b' by applying the functions in the first argument to the values in the second argument."
+    },
+    {
+    "Statement": "(<**>) mf mx = fmap (\\(f,x) -> f x) (mf ** mx)",
+    "Description": "Define the '(<**>)' operator for the 'Monoidal' type class by applying the functions in 'mf' to the values in 'mx' using the '(**)' operator and 'fmap'."
+    },
+    {
+    "Statement": "lift2 :: ( a -> b -> c ) -> (f a -> f b -> f c )",
+    "Description": "Declare the 'lift2' function signature, which takes a binary function '(a -> b -> c)' and returns a function that lifts the binary function to operate on values of types 'f a' and 'f b', returning a value of type 'f c'."
+    },
+    {
+    "Statement": "lift2 f x = (<**>) (fmap f x)",
+    "Description": "Define the 'lift2' function by applying 'fmap' to the input function 'f' and the input value 'x' of type 'f a', and then using the '(<**>)' operator to apply the resulting functions to the input value 'x'."
+    },
+    {
+    "Statement": "lift3 :: ( a -> b -> c ) -> (f a -> f b -> f c )",
+    "Description": "Declare the 'lift3' function signature, which takes a ternary function '(a -> b -> c -> d)' and returns a function that lifts the ternary function to operate on values of types 'f a', 'f b', and 'f c', returning a value of type 'f d'."
+    },
+    {
+    "Statement": "lift3 f a b c = lift2 f a b <\\*\\*> c",
+    "Description": "Define a function lift3 that takes three arguments f, a, b, and c. It applies the lift2 function to f, a, and b, and then applies the <\\*\\*> operator to the result and c."
+    },
+    {
+    "Statement": "class Functor f => Applicative (f :: _\\->_ )\n\nwhere\n\n    pure :: a -> f a\n\n    (<\\*>) :: f (a -> b) -> (f a -> f b)\n\n    liftA2 :: (a -> b -> c) -> f a -> f b -> f c",
+    "Description": "Define a typeclass Applicative that extends the Functor typeclass. It has three member functions: pure that takes a value a and returns a functor f a, (<\\*>) that takes a functor of functions f (a -> b) and a functor f a and returns a functor f b, and liftA2 that takes a function (a -> b -> c) and two functors f a and f b and returns a functor f c."
+    },
+    {
+    "Statement": "class Functor f => Applicative (f :: _\\->_ )\n\nwhere\n\n    pure :: a -> f a\n\n    (<\\*>) :: f (a -> b) -> f a -> f b",
+    "Description": "Define a typeclass Applicative that extends the Functor typeclass. It has two member functions: pure that takes a value a and returns a functor f a, and (<\\*>) that takes a functor of functions f (a -> b) and a functor f a and returns a functor f b."
+    },
+    {
+    "Statement": "class Functor f => Monoidal f where\n\n    unit :: f ()\n\n    (\\*\\*) :: f a -> f b -> f (a,b)",
+    "Description": "Define a typeclass Monoidal that extends the Functor typeclass. It has two member functions: unit that returns a functor f () representing the unit value, and (\\*\\*) that takes two functors f a and f b and returns a functor f (a,b) representing their product."
+    },
+    {
+    "Statement": "unit :: Applicative f => f ()\n\nunit = pure ()",
+    "Description": "Define a function unit that takes an Applicative functor f and returns its unit value f (), using the pure function from the Applicative typeclass."
+    },
+    {
+    "Statement": "(\\*\\*) :: Applicative f => f a -> f b -> f (a,b)\n\n(\\*\\*) fa fb = pure (,) <\\*> fa <\\*> fb",
+    "Description": "Define an operator (\\*\\*) that takes two Applicative functors f a and f b and returns their product f (a,b), using the pure and (<\\*>) functions from the Applicative typeclass."
+    },
+    {
+    "Statement": "pure :: Monoidal f => a -> f a\n\npure x = fmap (\\\\_ -> x) unit",
+    "Description": "Define a function pure that takes a value x and a Monoidal functor f and returns a functor f x, using the fmap and unit functions from the Monoidal and Functor typeclasses."
+    },
+    {
+    "Statement": "(<\\*\\*>) :: Monoidal f => f (a -> b) -> f a -> f b\n\n(<\\*\\*>) mf mx = fmap (\\\\(f,x) -> f x) (mf \\*\\* mx)",
+    "Description": "Define an operator (<\\*\\*>) that takes a Monoidal functor f (a -> b) and a Monoidal functor f a and returns a functor f b, using the fmap and (\\*\\*) functions from the Monoidal and Functor typeclasses."
+    },
+    {
+    "Statement": "fmap :: (a -> b) -> f a -> f b\n\n(<$>) :: (a -> b) -> f a -> f b\n\n(<\\*>) :: f (a -> b) -> (f a -> f b)",
+    "Description": "Define three functions: fmap that takes a function (a -> b) and a functor f a and returns a functor f b, (<$>) that does the same thing, and (<\\*>) that takes a functor of functions f (a -> b) and a functor f a and returns a functor f b."
+    },
+    {
+    "Statement": "instance Applicative IO where\n\n    pure = return\n\n    a <\\*> b = do\n\n        f <- a\n\n        x <- b\n\n        return (f x)",
+    "Description": "Define an instance of the Applicative typeclass for the IO monad. The pure function is implemented using return, and the (<\\*>) operator is implemented using a do block that first gets a function f from a, then a value x from b, and finally applies f to x and returns the result."
+    },
+    {
+    "Statement": "data Maybe a = Nothing | Just a",
+    "Description": "Define a data type Maybe a that represents an optional value, either Nothing or Just a."
+    },
+    {
+    "Statement": "unit :: a -> Maybe a\n\nunit x = Just x",
+    "Description": "Define a function unit that takes a value x and returns Just x, representing the unit value of the Maybe functor."
+    },
+    {
+    "Statement": "join :: Maybe (Maybe a) -> Maybe a\n\njoin (Just x) = x\n\njoin Nothing = Nothing",
+    "Description": "Define a function join that takes a nested Maybe (Maybe a) and flattens it to a single Maybe a, either by unwrapping the inner Just value or returning Nothing if the outer value is Nothing."
+    },
+    {
+    "Statement": "map :: Monad m => (a -> b) -> m a -> m b\n\nmap f = fmap f",
+    "Description": "Define a function map that takes a function (a -> b) and a monadic value m a and returns a monadic value m b, by applying fmap to the function f and the monadic value."
+    },
+    {
+    "Statement": "class Applicative m => Monad (m :: _\\->_ )\n\nwhere\n\n    (>>=) :: m a -> (a -> m b) -> m b\n\n    (>>) :: m a -> m b -> m b\n\n    return :: a -> m a",
+    "Description": "Define a typeclass Monad that extends the Applicative typeclass. It has three member functions: (>>=) that takes a monadic value m a and a function (a -> m b) and returns a monadic value m b, (>>) that takes two monadic values m a and m b and returns m b, and return that takes a value a and returns a monadic value m a."
+    },
+    {
+    "Statement": "(>>=) x f = join (map f x)\n\n(>>) m k = m >>= (\\\\_ -> k)\n\nreturn x = unit x",
+    "Description": "Define the member functions of the Monad typeclass: (>>=) is defined in terms of join and map, (>>) is defined using (>>=) and an anonymous function, and return is defined as unit."
+    },
+    {
+    "Statement": "join :: (Monad m) => m (m a) -> m a\n\njoin x = x >>= id",
+    "Description": "Define a function join that takes a nested monadic value m (m a) and flattens it to a single monadic value m a, using the (>>=) operator and the identity function id."
+    },
+    {
+    "Statement": "import Control.Arrow",
+    "Description": "Import the Control.Arrow module, which provides the Arrow typeclass and related functions."
+    },
+    {
+    "Statement": "class Category a => Arrow (a :: _->_ -> *)",
+    "Description": "Define a type class 'Arrow' parameterized by 'a' which must be an instance of the 'Category' type class. The 'Arrow' type is a higher-kinded type constructor that takes two type arguments and returns a type."
+    },
+    {
+    "Statement": "where\n  arr :: (b -> c) -> a b c\n  first :: a b c -> a (b, d) (c, d)\n  second :: a b c -> a (d, b) (d,c)\n  (***) :: a b c -> a b' c' -> a (b, b') (c, c')\n  (&&&) :: a b c -> a b c' -> a b (c, c')",
+    "Description": "Specify the methods that instances of the 'Arrow' type class must implement: 'arr' lifts a function to an arrow; 'first' and 'second' apply an arrow to the first or second component of a pair; '***' combines two arrows in parallel; '&&&' combines two arrows in parallel, keeping the input shared."
+    },
+    {
+    "Statement": "class Category (cat :: k -> k -> *) where\n  id :: forall (a :: k). cat a a\n  (.) :: forall (b :: k) (c :: k) (a :: k).\n         cat b c -> cat a b -> cat a c\n  (>>>) :: Category cat => cat a b -> cat b c -> cat a b -> cat a c\n  f >>> g = g . f",
+    "Description": "Define a type class 'Category' parameterized by 'cat', which is a higher-kinded type constructor that takes two type arguments and returns a type. The 'Category' class specifies the methods 'id' (identity arrow), '.' (arrow composition), and '>>>' (right-to-left arrow composition)."
+    },
+    {
+    "Statement": "instance Arrow (->) where\n  arr = id\n  (***) f g (x,y) = (f x, g y)\n  a :: (Arrow a, Num c) => a c c\n  a = arr (+1)\n  b :: (Arrow a, Num c) => a c c\n  b = arr (*2)\n  comb :: (Arrow a, Num c ) => a (c, c) c\n  comb = arr (\\(x,y) -> x + y)\n  c :: (Arrow cat, Num c) => cat c c\n  c = a &&& b >>> comb",
+    "Description": "Provide an instance of the 'Arrow' type class for the function type constructor '(->) a b'. It also defines several arrows: 'a' is an arrow that increments a number, 'b' is an arrow that doubles a number, 'comb' is an arrow that adds two numbers, and 'c' is an arrow that combines 'a' and 'b' in parallel and then adds the results using 'comb'."
+    },
+    {
+    "Statement": "newtype Kleisli m a b = Kleisli {runKleisli :: a -> m b}",
+    "Description": "Define a new type 'Kleisli' parameterized by 'm', 'a', and 'b'. 'Kleisli' is a newtype wrapper around a function 'a -> m b', where 'm' is a monad."
+    },
+    {
+    "Statement": "instance Monad m => Arrow (Kleisli m) where\n  arr f = Kleisli (return . f)\n  first (Kleisli f) = Kleisli (\\ -(b,d) -> f b >>= \\c -> return (c, d))\n  second (Kleisli f) = Kleisli (\\ -(d,b) -> f b >>= \\c -> return (d, c))\n  (***) = ...",
+    "Description": "Provide an instance of the 'Arrow' type class for the 'Kleisli' newtype, assuming that 'm' is an instance of the 'Monad' type class. The instance defines the 'arr', 'first', 'second', and '***' methods for 'Kleisli' arrows."
+    },
+    {
+    "Statement": "printInput = runKleisli ka ()\n  where ka = Kleisli (\\_-> getLine) >>> Kleisli putStrLn",
+    "Description": "Define a function 'printInput' that reads a line from the input and prints it to the output. It uses the 'Kleisli' arrow 'ka', which is composed of two 'Kleisli' arrows: one that reads a line from the input using 'getLine', and one that prints the line to the output using 'putStrLn'."
+    },
+    {
+    "Statement": "class Arrow a => ArrowChoice (a :: _->_ -> *)\n  where\n    lift :: a b c -> a (Either b d) (Either c d)\n    right :: a b c -> a (Either d b) (Either d c)\n    (+++) :: a b c -> a b' c' -> a (Either b b') (Either c c')\n    (|||) :: a b d -> a b d -> a (Either b c) d",
+    "Description": "Define a type class 'ArrowChoice' parameterized by 'a', which must be an instance of the 'Arrow' type class. The 'ArrowChoice' class specifies methods for working with sum types (e.g., 'Either') and choice operations."
+    },
+    {
+    "Statement": "listCase :: [a] -> Either () (a, [a])\nlistCase [] = Left ()\nlistCase (x:xs) = Right (x, xs)",
+    "Description": "Define a function 'listCase' that takes a list and returns either an empty tuple '()' (for the empty list) or a pair containing the head and tail of the list."
+    },
+    {
+    "Statement": "mapA :: ArrowChoice a => a a1 a2 -> a [a1] [a2]\nmapA f =\n  arr listCase >>>\n  arr (const []) ||| (f *** mapA f >>> arr (uncurry (:)))",
+    "Description": "Define a function 'mapA' that takes an arrow 'f' and applies it to each element of a list. It uses the 'ArrowChoice' operations to implement map in a point-free style."
+    },
+    {
+    "Statement": "class Arrow a => ArrowApply (a :: _->_ -> *)\n  where\n    app :: a (a b c, b) c",
+    "Description": "Define a type class 'ArrowApply' parameterized by 'a', which must be an instance of the 'Arrow' type class. The 'ArrowApply' class specifies a single method 'app' for applying an arrow to its input."
+    },
+    {
+    "Statement": "instance ArrowApply (->) where\n  app (f, x) = f x\n\ninstance Monad m => ArrowApply (Kleisli m) where\n  app = Kleisli (\\(Kleisli f, x) -> f x)",
+    "Description": "Provide instances of the 'ArrowApply' type class for the function type constructor '(->) a b' and the 'Kleisli' newtype, assuming that 'm' is an instance of the 'Monad' type class."
+    },
+    {
+    "Statement": "class Arrow a => ArrowLoop (a :: _->_ -> *)\n  where\n    loop :: a (b, d) (c, d) -> a b c",
+    "Description": "Define a type class 'ArrowLoop' parameterized by 'a', which must be an instance of the 'Arrow' type class. The 'ArrowLoop' class specifies a single method 'loop' for creating feedback loops."
+    },
+    {
+    "Statement": "instance ArrowApply (->) where",
+    "Description": "Create an instance of the ArrowApply typeclass for the function type constructor (->) that represents functions."
+    },
+    {
+    "Statement": "loop f b = let (c, d) = f(b, d) in c",
+    "Description": "Define the loop function for the ArrowApply instance of (->) that takes a function f and a value b, applies f to (b, d) where d is some undefined value, and returns the first component of the result."
+    },
+    {
+    "Statement": "instance Monadfix m => Arrowloop (Kleisli m)",
+    "Description": "Create an instance of the Arrowloop typeclass for the Kleisli m newtype, given that m is an instance of the Monadfix class."
+    },
+    {
+    "Statement": "loop (Kleisli f) = Kleisli (liftM fst . mfix . f')",
+    "Description": "Define the loop function for the Arrowloop instance of Kleisli m, which applies the mfix function to a modified version of the original function f, and then lifts the first component of the result using liftM fst."
+    },
+    {
+    "Statement": "where f' x y = f (x, snd y )",
+    "Description": "Define a helper function f' that takes x and y, and applies the original function f to (x, snd y), where snd y is the second component of y."
+    },
+    {
+    "Statement": "delete w = arr words >>> arr (filter (/= w)) >>> arr unwords",
+    "Description": "Define a function delete that takes a word w and returns a new function that removes all occurrences of w from a given string, using the point-free style and the arr function from the Arrow typeclass."
+    },
+    {
+    "Statement": "instance Monad (Either e)",
+    "Description": "Create an instance of the Monad typeclass for the Either e data type, which represents computations that can either succeed with a value of type a or fail with a value of type e."
+    },
+    {
+    "Statement": "instance Monad []",
+    "Description": "Create an instance of the Monad typeclass for the list type constructor [], which represents computations that can return multiple values."
+    },
+    {
+    "Statement": "instance Monad Maybe",
+    "Description": "Create an instance of the Monad typeclass for the Maybe data type, which represents computations that can either succeed with a value of type a or fail without a value."
+    },
+    {
+    "Statement": "instance Monad IO",
+    "Description": "Create an instance of the Monad typeclass for the IO data type, which represents computations that can perform side effects."
+    },
+    {
+    "Statement": "instance Monad ((->) r)",
+    "Description": "Create an instance of the Monad typeclass for the function type constructor (->) r, which represents computations that take a value of type r as input and return a value of type a."
+    },
+    {
+    "Statement": "instance Monad a => Monad ((,) a)",
+    "Description": "Create an instance of the Monad typeclass for the tuple type constructor (,) a, given that a is an instance of the Monad typeclass."
+    },
+    {
+    "Statement": "type IOMaybe a = IO (Maybe a)",
+    "Description": "Define a new type synonym IOMaybe a that represents a computation that can perform side effects and either succeed with a value of type a or fail without a value."
+    },
+    {
+    "Statement": "returnIOM :: a -> IOMaybe a",
+    "Description": "Define a function returnIOM that takes a value of type a and returns a successful IOMaybe computation with that value."
+    },
+    {
+    "Statement": "returnIOM = return . Just",
+    "Description": "Implement the returnIOM function by composing the Just constructor with the return function from the Monad typeclass."
+    },
+    {
+    "Statement": "bindIOM :: IOMaybe a -> (a -> IOMaybe b) -> IOMaybe b",
+    "Description": "Define a function bindIOM that takes an IOMaybe computation and a function that takes a value of type a and returns an IOMaybe computation of type b, and returns a new IOMaybe computation of type b that combines the two computations."
+    },
+    {
+    "Statement": "bindIOM iom f = do",
+    "Description": "Begin the implementation of the bindIOM function using the do notation."
+    },
+    {
+    "Statement": "maybe_val <- iom",
+    "Description": "Bind the result of the first IOMaybe computation iom to the variable maybe_val."
+    },
+    {
+    "Statement": "case maybe_val of",
+    "Description": "Begin a case expression to handle the two possible cases of maybe_val: Nothing or Just v."
+    },
+    {
+    "Statement": "Nothing -> return Nothing",
+    "Description": "If maybe_val is Nothing, return a failed IOMaybe computation by returning Nothing."
+    },
+    {
+    "Statement": "(Just v) -> f v",
+    "Description": "If maybe_val is Just v, apply the function f to the value v and return the resulting IOMaybe computation."
+    },
+    {
+    "Statement": "(>>>=) = bindIOM",
+    "Description": "Define the fish operator (>>>=) as a synonym for the bindIOM function, which is a common convention in Haskell."
+    },
+    {
+    "Statement": "liftIOm :: IO a -> IOMaybe a",
+    "Description": "Define a function liftIOm that takes an IO computation and lifts it into the IOMaybe context, allowing for side effects while still preserving the possibility of failure."
+    },
+    {
+    "Statement": "liftIOm io :: io >>= retrunIOM",
+    "Description": "Implement the liftIOm function by binding the result of the IO computation io to the returnIOM function, which wraps the value in a successful IOMaybe computation."
+    },
+    {
+    "Statement": "checkInput :: String -> Bool",
+    "Description": "Define a function checkInput that takes a String and returns a Bool indicating whether the input is valid or not."
+    },
+    {
+    "Statement": "checkInput [] = False",
+    "Description": "If the input String is empty, return False."
+    },
+    {
+    "Statement": "checkInput (x:_) = isUpper x",
+    "Description": "If the input String is non-empty, check if the first character is an uppercase letter using the isUpper function, and return the result as a Bool."
+    },
+    {
+    "Statement": "getName :: IOMaybe String",
+    "Description": "Define a function getName that represents an IOMaybe computation that can get a valid name from the user."
+    },
+    {
+    "Statement": "getName = do",
+    "Description": "Begin the implementation of the getName function using the do notation."
+    },
+    {
+    "Statement": "input <- getLine",
+    "Description": "Get a line of input from the user using the getLine function from the IO monad."
+    },
+    {
+    "Statement": "if checkInput input",
+    "Description": "Check if the input is valid using the checkInput function."
+    },
+    {
+    "Statement": "then returnIOM input",
+    "Description": "If the input is valid, return a successful IOMaybe computation with the input String."
+    },
+    {
+    "Statement": "else return Nothing",
+    "Description": "If the input is not valid, return a failed IOMaybe computation by returning Nothing."
+    },
+    {
+    "Statement": "type IOMaybe a = IO (Maybe a)",
+    "Description": "Define a new type synonym IOMaybe a that represents a computation that can perform side effects and either succeed with a value of type a or fail without a value."
+    },
+    {
+    "Statement": "returniOM :: a -> IOMaybe a",
+    "Description": "Define a function returnIOM that takes a value of type a and returns a successful IOMaybe computation with that value."
+    },
+    {
+    "Statement": "returnIOM = return . Just",
+    "Description": "Implement the returnIOM function by composing the Just constructor with the return function from the Monad typeclass."
+    },
+    {
+    "Statement": "bindIOM :: IOMaybe a -> (a -> IOMaybe b) -> IOMaybe b",
+    "Description": "Define a function bindIOM that takes an IOMaybe a and a function from a to IOMaybe b, and returns an IOMaybe b."
+    },
+    {
+    "Statement": "bindIOM iom f = do",
+    "Description": "Begin the definition of bindIOM by using a do block."
+    },
+    {
+    "Statement": "maybe_val <- iom",
+    "Description": "Bind the result of evaluating iom to maybe_val."
+    },
+    {
+    "Statement": "case maybe_val of",
+    "Description": "Start a case expression on maybe_val."
+    },
+    {
+    "Statement": "Nothing -> return Nothing",
+    "Description": "If maybe_val is Nothing, return Nothing."
+    },
+    {
+    "Statement": "(Just v) -> f v",
+    "Description": "If maybe_val is Just v, apply the function f to v and return the result."
+    },
+    {
+    "Statement": "(>>>=) = bindIOM",
+    "Description": "Define the (>>>=) operator as bindIOM."
+    },
+    {
+    "Statement": "liftIOm :: IO a -> IOMaybe a",
+    "Description": "Define a function liftIOm that takes an IO a and returns an IOMaybe a."
+    },
+    {
+    "Statement": "liftIOm io :: io >>= retrunIOM",
+    "Description": "Define liftIOm io as io >>= returnIOM."
+    },
+    {
+    "Statement": "checkInput :: String -> Bool",
+    "Description": "Define a function checkInput that takes a String and returns a Bool."
+    },
+    {
+    "Statement": "checkInput [] = False",
+    "Description": "If the input string is empty, return False."
+    },
+    {
+    "Statement": "checkInput (x:_ = isUpper x",
+    "Description": "If the input string is non-empty, check if the first character is uppercase and return the result."
+    },
+    {
+    "Statement": "getName :: IOMaybe String",
+    "Description": "Define a function getName that returns an IOMaybe String."
+    },
+    {
+    "Statement": "getName = do",
+    "Description": "Begin the definition of getName by using a do block."
+    },
+    {
+    "Statement": "input <- getLine",
+    "Description": "Read a line of input from the user and bind it to input."
+    },
+    {
+    "Statement": "if checkInput input",
+    "Description": "Check if the input satisfies the checkInput condition."
+    },
+    {
+    "Statement": "then returnIOM input",
+    "Description": "If the condition is satisfied, return the input wrapped in a Just constructor using returnIOM."
+    },
+    {
+    "Statement": "else return Nothing",
+    "Description": "If the condition is not satisfied, return Nothing."
+    },
+    {
+    "Statement": "getName :: MaybeT IO String",
+    "Description": "Declare a function named `getName` that returns a `MaybeT IO String` value, which represents a computation that may fail to produce a `String` value within the `IO` monad."
+    },
+    {
+    "Statement": "getName = do",
+    "Description": "Begin the definition of the `getName` function using the do notation for monadic computations."
+    },
+    {
+    "Statement": "input <- lift getLine",
+    "Description": "Read a line of input from the user within the `IO` monad, and bind the result to the `input` variable."
+    },
+    {
+    "Statement": "guard (checkInput input)",
+    "Description": "Use the `guard` function to conditionally proceed with the computation based on the result of `checkInput input`, which presumably checks if the input satisfies some condition."
+    },
+    {
+    "Statement": "return input",
+    "Description": "If the guard condition is satisfied, return the `input` value as the result of the `getName` computation."
+    },
+    {
+    "Statement": "example = runMaybeT $ do",
+    "Description": "Define a value `example` by running a `MaybeT` computation using `runMaybeT`."
+    },
+    {
+    "Statement": "lift $ putStr \"Please enter your name: \"",
+    "Description": "Print the prompt \"Please enter your name: \" to the user within the `IO` monad, using `lift` to lift the `IO` action into the `MaybeT` monad."
+    },
+    {
+    "Statement": "name <- getName",
+    "Description": "Call the `getName` function and bind the result (if successful) to the `name` variable."
+    },
+    {
+    "Statement": "lift $ putStrLn $ \"Your name is \" ++ name",
+    "Description": "Print a message that includes the user's name, using `lift` to lift the `IO` action into the `MaybeT` monad."
+    },
+    {
+    "Statement": "readUntil :: String -> IO ()",
+    "Description": "Declare a function named `readUntil` that takes a `String` argument and returns an `IO ()` computation, which reads input from the user until a specific ending string is entered."
+    },
+    {
+    "Statement": "readUntil ending = do",
+    "Description": "Begin the definition of the `readUntil` function using the do notation for monadic computations."
+    },
+    {
+    "Statement": "input <- getLine",
+    "Description": "Read a line of input from the user within the `IO` monad, and bind the result to the `input` variable."
+    },
+    {
+    "Statement": "if input == ending then return () else readUntil ending",
+    "Description": "Check if the input is equal to the `ending` string. If so, return the unit value `()` to indicate successful completion. Otherwise, recursively call `readUntil` with the same `ending` string."
+    },
+    {
+    "Statement": "readUntilWithCount :: String -> IO Int",
+    "Description": "Declare a function named `readUntilWithCount` that takes a `String` argument and returns an `IO Int` computation, which reads input from the user until a specific ending string is entered and returns the number of lines read."
+    },
+    {
+    "Statement": "readUntilWithCount ending = aux ending 0",
+    "Description": "Define the `readUntilWithCount` function by calling an auxiliary function `aux` with the `ending` string and an initial count of `0`."
+    },
+    {
+    "Statement": "where aux ending count = do",
+    "Description": "Begin the definition of the `aux` function using the do notation for monadic computations. The `aux` function takes the `ending` string and the current `count` as arguments."
+    },
+    {
+    "Statement": "input <- getLine",
+    "Description": "Read a line of input from the user within the `IO` monad, and bind the result to the `input` variable."
+    },
+    {
+    "Statement": "let ncount = count + 1",
+    "Description": "Calculate the new count `ncount` by incrementing the current `count` by 1."
+    },
+    {
+    "Statement": "if input == ending then return ncount else aux ending ncount",
+    "Description": "Check if the input is equal to the `ending` string. If so, return the current `ncount` value. Otherwise, recursively call `aux` with the same `ending` string and the updated `ncount` value."
+    },
+    {
+    "Statement": "newtype StateT s (m :: * -> *) a",
+    "Description": "Declare a new type constructor `StateT` that represents a state transformer monad, parameterized by the state type `s`, a base monad `m`, and the result type `a`."
+    },
+    {
+    "Statement": "runStateT :: StateT s m a -> s -> m (a, s)",
+    "Description": "Declare a function `runStateT` that takes a `StateT` computation and an initial state, and runs the computation within the base monad `m`, returning the result value `a` and the final state `s`."
+    },
+    {
+    "Statement": "evalStateT :: Monad m => StateT s m a -> s -> m a",
+    "Description": "Declare a function `evalStateT` that takes a `StateT` computation and an initial state, and runs the computation within the base monad `m`, returning only the result value `a` (discarding the final state)."
+    },
+    {
+    "Statement": "execStateT :: Monad m => StateT s m a -> s -> m s",
+    "Description": "Declare a function `execStateT` that takes a `StateT` computation and an initial state, and runs the computation within the base monad `m`, returning only the final state `s` (discarding the result value)."
+    },
+    {
+    "Statement": "get :: m s",
+    "Description": "Declare a function `get` that retrieves the current state value within the base monad `m`."
+    },
+    {
+    "Statement": "put :: s -> m ()",
+    "Description": "Declare a function `put` that takes a new state value and updates the current state within the base monad `m`."
+    },
+    {
+    "Statement": "readUntilWithState :: String -> IO Int",
+    "Description": "Declare a function named `readUntilWithState` that takes a `String` argument and returns an `IO Int` computation, which reads input from the user until a specific ending string is entered and returns the number of lines read, using the `StateT` monad transformer."
+    },
+    {
+    "Statement": "readUntilWithState ending = execStateT (aux ending) 0",
+    "Description": "Define the `readUntilWithState` function by executing the `aux` computation within the `StateT` monad transformer, using `execStateT` to discard the result value and return the final state (the count)."
+    },
+    {
+    "Statement": "where aux ending = do",
+    "Description": "Begin the definition of the `aux` function using the do notation for monadic computations. The `aux` function takes the `ending` string as an argument."
+    },
+    {
+    "Statement": "count <- get",
+    "Description": "Retrieve the current count value from the state using the `get` function."
+    },
+    {
+    "Statement": "input <- liftIO getLine",
+    "Description": "Read a line of input from the user within the `IO` monad, lifted into the `StateT` monad using `liftIO`."
+    },
+    {
+    "Statement": "put (count + 1)",
+    "Description": "Update the state by incrementing the current count by 1 and storing the new value using the `put` function."
+    },
+    {
+    "Statement": "if input == ending then return () else aux ending",
+    "Description": "Check if the input is equal to the `ending` string. If so, return the unit value `()` to indicate successful completion. Otherwise, recursively call `aux` with the same `ending` string."
+    },
+    {
+    "Statement": "else readUntil ending",
+    "Description": "If the input is not the ending string, recursively call readUntil with the ending string."
+    },
+    {
+    "Statement": "readUntilWithCount :: String -> IO Int",
+    "Description": "Declare a function readUntilWithCount that takes a String argument and returns an IO Int value."
+    },
+    {
+    "Statement": "readUntilWithCount ending = aux ending 0",
+    "Description": "Define the implementation of readUntilWithCount by calling the auxiliary function aux with the ending string and an initial count of 0."
+    },
+    {
+    "Statement": "where aux ending count = do",
+    "Description": "Declare an auxiliary function aux that takes the ending string and a count as arguments, and performs the following actions in the IO monad."
+    },
+    {
+    "Statement": "input ‹- getLine",
+    "Description": "Read a line of input from the user and bind it to the variable input."
+    },
+    {
+    "Statement": "let ncount = count + 1",
+    "Description": "Calculate the new count by incrementing the current count by 1, and bind it to the variable ncount."
+    },
+    {
+    "Statement": "if input == ending then",
+    "Description": "Check if the input string is equal to the ending string."
+    },
+    {
+    "Statement": "return ncount",
+    "Description": "If the input string is equal to the ending string, return the final count."
+    },
+    {
+    "Statement": "else aux ending ncount",
+    "Description": "If the input string is not equal to the ending string, recursively call aux with the ending string and the new count."
+    },
+    {
+    "Statement": "newtype StateT s (m :: _\\->_ ) a",
+    "Description": "Declare a new type constructor StateT that takes two type parameters: s (representing the state) and m (representing a monad), and returns a new type a."
+    },
+    {
+    "Statement": "runStateT :: StateT sm a ->s → m (a, s)",
+    "Description": "Declare a function runStateT that takes a StateT computation and an initial state, and returns a monadic computation that produces a tuple containing the final result and the final state."
+    },
+    {
+    "Statement": "evalStateT :: Monad m => StateT s m a -> s -> m a",
+    "Description": "Declare a function evalStateT that takes a StateT computation and an initial state, and returns a monadic computation that produces the final result, discarding the final state."
+    },
+    {
+    "Statement": "execStateT :: Monad m => StateT sm a -> s -> m s",
+    "Description": "Declare a function execStateT that takes a StateT computation and an initial state, and returns a monadic computation that produces the final state, discarding the final result."
+    },
+    {
+    "Statement": "get :: m s",
+    "Description": "Declare a function get that returns the current state inside a monadic context."
+    },
+    {
+    "Statement": "put :: s -> m ()",
+    "Description": "Declare a function put that takes a new state and updates the current state inside a monadic context, returning an empty tuple."
+    },
+    {
+    "Statement": "readUntilWithState :: String -> 10 Int",
+    "Description": "Declare a function readUntilWithState that takes a String argument and returns an IO Int value."
+    },
+    {
+    "Statement": "readUntilWithState ending = execStateT (aux ending) 0",
+    "Description": "Define the implementation of readUntilWithState by calling execStateT with the auxiliary function aux (using the ending string as an argument) and an initial state of 0."
+    },
+    {
+    "Statement": "where aux ending = do",
+    "Description": "Declare an auxiliary function aux that takes the ending string as an argument, and performs the following actions in the StateT monad."
+    },
+    {
+    "Statement": "count ‹- get",
+    "Description": "Get the current count from the state and bind it to the variable count."
+    },
+    {
+    "Statement": "input <- liftIo getLine",
+    "Description": "Read a line of input from the user and bind it to the variable input, using liftIo to lift the IO action into the StateT monad."
+    },
+    {
+    "Statement": "put (count + 1)",
+    "Description": "Update the state by incrementing the current count by 1."
+    },
+    {
+    "Statement": "if input == ending then return () else aux ending",
+    "Description": "Check if the input string is equal to the ending string. If it is, return an empty tuple. Otherwise, recursively call aux with the ending string."
+    },
+    {
+    "Statement": "type State s = StateT s Identity",
+    "Description": "Declare a type alias State s, which is equivalent to StateT s Identity, representing a state monad transformer with the Identity monad."
+    },
+    {
+    "Statement": "runState :: States a →>s -> (a, s)",
+    "Description": "Declare a function runState that takes a State computation and an initial state, and returns a tuple containing the final result and the final state."
+    },
+    {
+    "Statement": "evalState :: States a →> s -> a",
+    "Description": "Declare a function evalState that takes a State computation and an initial state, and returns the final result, discarding the final state."
+    },
+    {
+    "Statement": "data [l a = [] a : [a]",
+    "Description": "Declare a data type [a] that represents a list of elements of type a, with two constructors: [] (representing an empty list) and (:) (representing a non-empty list by prepending an element to an existing list)."
+    },
+    {
+    "Statement": "length [] = 0",
+    "Description": "Define the length of an empty list as 0."
+    },
+    {
+    "Statement": "length (_:xs) = 1 + length xs",
+    "Description": "Define the length of a non-empty list as 1 plus the length of the remaining elements (xs)."
+    },
+    {
+    "Statement": "length xs =? = foldr (const (+1)) 0 xs",
+    "Description": "State that the length of a list xs can be computed using the foldr function, applying the const (+1) function to each element and starting with an initial value of 0."
+    },
+    {
+    "Statement": "data [] a = [] | a : [a]",
+    "Description": "Declare a data type [a] that represents a list of elements of type a, with two constructors: [] (representing an empty list) and (:) (representing a non-empty list by prepending an element to an existing list)."
+    },
+    {
+    "Statement": "length [] =?= foldr (const (+1)) 0 []",
+    "Description": "State that the length of an empty list is equal to foldr (const (+1)) 0 [] (which should evaluate to 0)."
+    },
+    {
+    "Statement": "length (x:xs) =?= foldr (const (+1)) 0 (x:xs)",
+    "Description": "State that the length of a non-empty list (x:xs) is equal to foldr (const (+1)) 0 (x:xs)."
+    },
+    {
+    "Statement": "splice [] [] = []",
+    "Description": "Define the splice function for two empty lists to return an empty list."
+    },
+    {
+    "Statement": "splice [] ys = ys",
+    "Description": "Define the splice function for an empty list and a non-empty list ys to return the list ys."
+    },
+    {
+    "Statement": "splice xs [] = xs",
+    "Description": "Define the splice function for a non-empty list xs and an empty list to return the list xs."
+    },
+    {
+    "Statement": "splice (x:xs) (y:ys) = x : y : splice xs ys",
+    "Description": "Prepend the first elements of the two lists x and y, and then recursively splice the remaining elements xs and ys."
+    },
+    {
+    "Statement": "sum [] = 0",
+    "Description": "The base case for summing an empty list, which returns 0."
+    },
+    {
+    "Statement": "sum (x: xs) = x + sum xs",
+    "Description": "Sum the first element x with the sum of the remaining elements xs recursively."
+    },
+    {
+    "Statement": "sum (splice xs ys) =?= sum xs + sum ys",
+    "Description": "Verify whether the sum of splicing two lists xs and ys is equal to the sum of the individual lists xs and ys."
+    },
+    {
+    "Statement": "splice [] [] = []",
+    "Description": "The base case for splicing two empty lists, which returns an empty list."
+    },
+    {
+    "Statement": "splice [] ys = ys",
+    "Description": "If the first list is empty, return the second list ys as the result of splicing."
+    },
+    {
+    "Statement": "splice xs [] = xs",
+    "Description": "If the second list is empty, return the first list xs as the result of splicing."
+    },
+    {
+    "Statement": "splice (x:xs) (y:ys) = x : y : splice xs ys",
+    "Description": "Prepend the first elements of the two lists x and y, and then recursively splice the remaining elements xs and ys."
+    },
+    {
+    "Statement": "func :: Int -> Int",
+    "Description": "Define a function named `func` which takes an `Int` and returns an `Int`."
+    },
+    {
+    "Statement": "func x = if x == 0 then ( else f (x-1))",
+    "Description": "Define `func` to return `f (x-1)` if `x` is equal to 0."
+    },
+    {
+    "Statement": "fac :: Int -> Int",
+    "Description": "Define a function named `fac` which takes an `Int` and returns an `Int`."
+    },
+    {
+    "Statement": "fac n",
+    "Description": "Define `fac` with parameter `n`."
+    },
+    {
+    "Statement": "n == 0 =1",
+    "Description": "If `n` is equal to 0, return 1."
+    },
+    {
+    "Statement": "otherwise = n * fac (n-1)",
+    "Description": "Otherwise, return `n * fac (n-1)`."
+    },
+    {
+    "Statement": "p n= n≥ 0",
+    "Description": "Define `p` as a function that takes `n` and returns `True` if `n` is greater than or equal to 0."
+    },
+    {
+    "Statement": "hn = n",
+    "Description": "Assign `hn` the value of `n`."
+    },
+    {
+    "Statement": "func :: Int -> Int -> Int -> Int",
+    "Description": "Define a function named `func` which takes three `Int` parameters and returns an `Int`."
+    },
+    {
+    "Statement": "| × < y = Z",
+    "Description": "If `x * y` is less than `y`, return `Z`."
+    },
+    {
+    "Statement": "| otherwise = func (x-y) (y*2) (z+1)",
+    "Description": "Otherwise, recursively call `func` with `(x-y)`, `(y*2)`, and `(z+1)`."
+    },
+    {
+    "Statement": "map :: (a -> b) -> [a] -> [b]",
+    "Description": "Define a function named `map` which takes a function `(a -> b)` and a list of `a` and returns a list of `b`."
+    },
+    {
+    "Statement": "map [] = []",
+    "Description": "If the list is empty, return an empty list."
+    },
+    {
+    "Statement": "map f (x:xs) = f x : map f xs",
+    "Description": "Otherwise, apply function `f` to the first element `x` and recursively apply `map` to the rest of the list."
+    },
+    {
+    "Statement": "fac :: Int -> Int",
+    "Description": "Define a function named `fac` which takes an `Int` and returns an `Int`."
+    },
+    {
+    "Statement": "fac n",
+    "Description": "Define `fac` with parameter `n`."
+    },
+    {
+    "Statement": "| n == 0      =1",
+    "Description": "If `n` is equal to 0, return 1."
+    },
+    {
+    "Statement": "| otherwise = n * fac (n-1)",
+    "Description": "Otherwise, return `n * fac (n-1)`."
+    },
+    {
+    "Statement": "Induction Base",
+    "Description": "Define induction base."
+    },
+    {
+    "Statement": "fac :: Int -> Int",
+    "Description": "Define a function named `fac` which takes an `Int` and returns an `Int`."
+    },
+    {
+    "Statement": "fac n",
+    "Description": "Define `fac` with parameter `n`."
+    },
+    {
+    "Statement": "| n == 0      =1",
+    "Description": "If `n` is equal to 0, return 1."
+    },
+    {
+    "Statement": "| otherwise = n * fac (n-1)",
+    "Description": "Otherwise, return `n * fac (n-1)`."
+    },
+    {
+    "Statement": "theory Tree",
+    "Description": "Define a theory named `Tree`."
+    },
+    {
+    "Statement": "imports Main",
+    "Description": "Import `Main` module."
+    },
+    {
+    "Statement": "begin",
+    "Description": "Begin the theory."
+    },
+    {
+    "Statement": "datatype 'a Tree = Leaf | Node \"'a Tree\" 'a \"'a Tree\"",
+    "Description": "Define a datatype named `Tree` that takes a type parameter `'a`."
+    },
+    {
+    "Statement": "fun insert :: \"'a :: linorder → 'a Tree → 'a Tree\"",
+    "Description": "Define a function named `insert` which takes a value of type `'a :: linorder` and a `Tree 'a` and returns a `Tree 'a`."
+    },
+    {
+    "Statement": "fun insert v Leaf = Node Leaf v Leaf",
+    "Description": "If the tree is empty, insert `v` and create a node."
+    },
+    {
+    "Statement": "fun insert v (Node l tv r) = (if v ≤ tv then (Node (insert v l) tv r) else (Node l tv (insert v r)))",
+    "Description": "Otherwise, insert `v` into the appropriate branch depending on the comparison of `v` and `tv`."
+    },
+    {
+    "Statement": "fun mirror :: \"'a Tree → 'a Tree\"",
+    "Description": "Define a function named `mirror` which takes a `Tree` and returns a `Tree`."
+    },
+    {
+    "Statement": "fun mirror Leaf = Leaf",
+    "Description": "If the tree is empty, return an empty tree."
+    },
+    {
+    "Statement": "fun mirror (Node l v r) = Node (mirror r) v (mirror l)",
+    "Description": "Otherwise, create a node with mirrored left and right branches."
+    },
+    {
+    "Statement": "fun fromList :: \"('a :: linorder) list → 'a Tree\"",
+    "Description": "Define a function named `fromList` which takes a list of type `('a :: linorder)` and returns a `Tree 'a`."
+    },
+    {
+    "Statement": "fun fromList [] = Leaf",
+    "Description": "If the list is empty, return an empty tree."
+    },
+    {
+    "Statement": "fun fromList (x#xs) = insert x (fromList xs)",
+    "Description": "Otherwise, insert each element of the list into the tree."
+    },
+    {
+    "Statement": "fun inorder :: \"'a Tree → 'a list\"",
+    "Description": "Define a function named `inorder` which takes a `Tree 'a` and returns a list of 'a."
+    },
+    {
+    "Statement": "inorder Leaf = []",
+    "Description": "If the tree is empty, return an empty list."
+    },
+    {
+    "Statement": "inorder (Node l v f) = (inorder l) @ [v] @ (inorder r)",
+    "Description": "Otherwise, return the list obtained by concatenating the inorder traversal of the left branch, `v`, and the inorder traversal of the right branch."
+    },
+    {
+    "Statement": "lemma \"mirror (mirror t) = t\"",
+    "Description": "Define a lemma asserting that mirroring a mirrored tree results in the original tree."
+    },
+    {
+    "Statement": "sorry",
+    "Description": "Indicate the proof is skipped for now."
+    },
+    {
+    "Statement": "abbreviation sortedT :: \"('a :: linorder) Tree → bool*",
+    "Description": "Define an abbreviation named `sortedT` which takes a `Tree` of type `('a :: linorder)` and returns a `bool`."
+    },
+    {
+    "Statement": "where",
+    "Description": "Begin definition of the `sortedT` abbreviation."
+    },
+    {
+    "Statement": "\"sortedT t = sorted (inorder t)\"",
+    "Description": "Define `sortedT` as a function that checks if the tree is sorted by using the inorder traversal."
+    },
+    {
+    "Statement": "Lemma sortedT_values sets: \"sortedT t A t = (Node l v r) → (Vv € setT l. lv ≤ v) A (Vrv e setT r. rv 2 v)\"",
+    "Description": "Define a lemma asserting that if the tree `t` is sorted, then the left and right subtrees are also sorted."
+    },
+    {
+    "Statement": "apply (induct t)",
+    "Description": "Begin the proof by induction over tree `t`."
+    },
+    {
+    "Statement": "apply (auto)",
+    "Description": "Use the `auto` tactic to automatically solve the generated subgoals."
+    },
+    {
+    "Statement": "apply (simp add: sorted_append)",
+    "Description": "Apply the `simp` tactic with the additional information `sorted_append`."
+    },
+    {
+    "Statement": "using sorted. simps(2) sorted append by blast",
+    "Description": "Use the given sorted lemma to solve the subgoals."
+    },
+    {
+    "Statement": "Lemma sets value sortedT:",
+    "Description": "Define a lemma named `sortedT_values`."
+    },
+    {
+    "Statement": "assumes",
+    "Description": "Specify assumptions for the lemma."
+    },
+    {
+    "Statement": "\"(Vlv € setT l. lv ≤ v)\"",
+    "Description": "Assume that for every `lv` in the set of `l`, `lv` is less than or equal to `v`."
+    },
+    {
+    "Statement": "\"(Vrv e setT r. rv > v)\"",
+    "Description": "Assume that for every `rv` in the set of `r`, `rv` is greater than `v`."
+    },
+    {
+    "Statement": "\"assumes 'sortedT l'\"",
+    "Description": "Assume that `l` is sorted."
+    },
+    {
+    "Statement": "\"assumes 'sortedT r'\"",
+    "Description": "Assume that `r` is sorted."
+    },
+    {
+    "Statement": "\"shows 'sorted (inorder l @ [v] @ inorder r)'\"",
+    "Description": "Show that the inorder traversal of `l`, followed by `v`, followed by the inorder traversal of `r`, is sorted."
+    },
+    {
+    "Statement": "using assms sorted append by fastforce",
+    "Description": "Use the given sorted lemma and `fastforce` tactic to solve the subgoal."
+    },
+    {
+    "Statement": "Lemma sorted node:",
+    "Description": "Define a lemma named `sorted_node`."
+    },
+    {
+    "Statement": "\"sortedT t At = (Node l v r) → sortedT 1 A sortedT r\"",
+    "Description": "If the tree `t` is sorted, then for every `Node l v r`, `l` and `r` are sorted."
+    },
+    {
+    "Statement": "apply (induct t)",
+    "Description": "Begin the proof by induction over tree `t`."
+    },
+    {
+    "Statement": "apply blast",
+    "Description": "Use the `blast` tactic to automatically solve the generated subgoals."
+    },
+    {
+    "Statement": "by (metis inorder.simps (2) sorted_append)",
+    "Description": "Use the given sorted lemma to solve the subgoal."
+    },
+    {
+    "Statement": "lemma setT insert: \"setT (insert v t) = setT t U {v}\"",
+    "Description": "Define a lemma asserting the set of a tree after inserting `v` is equal to the set of the original tree unioned with `{v}`."
+    },
+    {
+    "Statement": "proof (induction t rule:insert. induct)",
+    "Description": "Apply induction on the tree with the rule for the 'insert' function."
+    },
+    {
+    "Statement": "case (1 v)",
+    "Description": "If the case is (1 v),"
+    },
+    {
+    "Statement": "then show ?case by simp",
+    "Description": "then show the current case."
+    },
+    {
+    "Statement": "next",
+    "Description": "Move to the next case."
+    },
+    {
+    "Statement": "case (2 v l tv r)",
+    "Description": "If the case is (2 v l tv r),"
+    },
+    {
+    "Statement": "have sorted left: \"sortedT l\" using 2 sorted node by blast",
+    "Description": "declare that 'l' is sorted."
+    },
+    {
+    "Statement": "have sorted_right: \"sortedT r\" using 2 sorted node by blast",
+    "Description": "declare that 'r' is sorted."
+    },
+    {
+    "Statement": "have tv disjunct: \"(Vlv € setT l. lv S tv) A (Vrv € setT r. rv 2 tv)\" using \"2.prems\" sortedT values sets by k",
+    "Description": "assert the disjunction of 'tv' with the set 'l' and 'r'."
+    },
+    {
+    "Statement": "then show ?case",
+    "Description": "then show the current case."
+    },
+    {
+    "Statement": "proof (cases \"v s tv\")",
+    "Description": "Apply proof by cases on 'v s tv'."
+    },
+    {
+    "Statement": "case True",
+    "Description": "If the case is True,"
+    },
+    {
+    "Statement": "have \"insert v (Node l tv r) = Node (insert v l) tv r\" by (simp add: True)",
+    "Description": "then prove the equation 'insert v (Node l tv r) = Node (insert v l) tv r'."
+    },
+    {
+    "Statement": "have \"Viv € setT (insert v l). iv ≤ tv\" by (simp add: setT_ insert tv disjunct True)",
+    "Description": "assert that all the elements in the setT (insert v l) are less than or equal to 'tv'."
+    },
+    {
+    "Statement": "then show ?thesis using True sets value sortedT \"2.IH\" (1) sorted left sorted right tv disjunct by auto",
+    "Description": "then show the thesis using the given data and the assumed statement."
+    },
+    {
+    "Statement": "next",
+    "Description": "Move to the next case."
+    },
+    {
+    "Statement": "case False",
+    "Description": "If the case is False,"
+    },
+    {
+    "Statement": "have \"insert v (Node l tv r) = Node l tv (insert v r)\" by (simp add: False)",
+    "Description": "then prove the equation 'insert v (Node l tv r) = Node l tv (insert v r)'."
+    },
+    {
+    "Statement": "have \"Viv € setT (insert v r). iv ≥ tv\" using setT insert tv disjunct False by (metis Un iff le cases single",
+    "Description": "assert that all the elements in the setT (insert v r) are greater than or equal to 'tv'."
+    },
+    {
+    "Statement": "then show ?thesis using False sets_value_sortedT sorted_left sorted_right tv_disjunct \"2.IH\" (2) by auto",
+    "Description": "then show the thesis using the given data and the assumed statement."
+    },
+    {
+    "Statement": "qed",
+    "Description": "Close the current proof."
+    },
+    {
+    "Statement": "qed",
+    "Description": "Close the current proof."
+    },
+    {
+    "Statement": "Lemma \"sorted (inorder (fromList x§) )\"",
+    "Description": "State the lemma 'sorted (inorder (fromList x§))'."
+    },
+    {
+    "Statement": "by (induct xs) (auto simp:sorted insert)",
+    "Description": "Prove the lemma by induction on 'xs' and using 'auto simp:sorted insert'."
+    },
+    {
+    "Statement": "export_Statement insert fromList inorder in Haskell module_name SortedTreel",
+    "Description": "Export the functions 'insert', 'fromList', and 'inorder' in Haskell module 'SortedTreel'."
+    },
+    {
+    "Statement": "import qualified Prelude;",
+    "Description": "Import the Prelude module qualified."
+    },
+    {
+    "Statement": "class Ord a where {",
+    "Description": "Define a class 'Ord' with type variable 'a' where,"
+    },
+    {
+    "Statement": "less eq:: a →> a -> Bool;",
+    "Description": "Define 'less' as a function which takes two arguments of type 'a' and returns a Bool."
+    },
+    {
+    "Statement": "less :: a →> a -> Bool;",
+    "Description": "Define 'less' as a function which takes two arguments of type 'a' and returns a Bool."
+    },
+    {
+    "Statement": "};",
+    "Description": "End of the class definition."
+    },
+    {
+    "Statement": "class (Ord a) => Preorder a where {",
+    "Description": "Define a class 'Preorder' with type variable 'a' which is a subclass of 'Ord', where,"
+    },
+    {
+    "Statement": "class (Preorder a) => Order a where {",
+    "Description": "Define a class 'Order' with type variable 'a' which is a subclass of 'Preorder', where,"
+    },
+    {
+    "Statement": "class (Order a) => Linorder a where {",
+    "Description": "Define a class 'Linorder' with type variable 'a' which is a subclass of 'Order', where,"
+    },
+    {
+    "Statement": "};",
+    "Description": "End of the class definition."
+    },
+    {
+    "Statement": "data Tree a = Leaf | Node (Tree a) a (Tree a) ;",
+    "Description": "Define a data type 'Tree' with type variable 'a' which can either be a 'Leaf' or a 'Node' with three parameters."
+    },
+    {
+    "Statement": "insert:: forall a. (Linorder a) => a -> Tree a -> Tree a;",
+    "Description": "Define a function 'insert' which takes an element of type 'a' and a 'Tree a' and returns a 'Tree a'."
+    },
+    {
+    "Statement": "insert v Leaf = Node Leaf v Leaf;",
+    "Description": "If the tree is a 'Leaf', then insert 'v' into it."
+    },
+    {
+    "Statement": "insert v (Node l tv r) =\n(if less eq v tv then Node (insert v l) tv r else Node l tv (insert v r));",
+    "Description": "If 'v' is less than or equal to 'tv', then insert 'v' in the left subtree, else insert 'v' in the right subtree."
+    },
+    {
+    "Statement": "inorder :: forall a. Tree a -> [a];",
+    "Description": "Define a function 'inorder' which takes a 'Tree a' and returns a list of 'a'."
+    },
+    {
+    "Statement": "inorder Leaf = []:",
+    "Description": "If the tree is a 'Leaf', then return an empty list."
+    },
+    {
+    "Statement": "inorder (Node l v r) = inorder l ++ [v] ++ inorder r;",
+    "Description": "Traverse the left subtree, add 'v', and then traverse the right subtree."
+    },
+    {
+    "Statement": "fromList:: forall a. (Linorder a) => [a] -> Tree a;",
+    "Description": "Define a function 'fromList' which takes a list of 'a' and returns a 'Tree a'."
+    },
+    {
+    "Statement": "fromList [] = Leaf;",
+    "Description": "If the list is empty, return a 'Leaf'."
+    },
+    {
+    "Statement": "fromList (x : xs) = insert x (fromList xs) ;",
+    "Description": "Insert each element of the list into the tree."
+    },
+    {
+    "Statement": "module main where",
+    "Description": "Start of the main module."
+    },
+    {
+    "Statement": "import Quickspec",
+    "Description": "Import the Quickspec module."
+    },
+    {
+    "Statement": "import Test.QuickCheck",
+    "Description": "Import the Test.QuickCheck module."
+    },
+    {
+    "Statement": "import Test.QuickCheck-Arbitrary",
+    "Description": "Import the Test.QuickCheck-Arbitrary module."
+    },
+    {
+    "Statement": "import Test.QuickCheck.Poly(OrdA(..))",
+    "Description": "Import the OrdA class from Test.QuickCheck.Poly module."
+    },
+    {
+    "Statement": "import Data. List hiding ( insert )",
+    "Description": "Import the Data.List module and hide the 'insert' function."
+    },
+    {
+    "Statement": "import Data.Ord ( comparing )",
+    "Description": "Import the 'comparing' function from Data.Ord module."
+    },
+    {
+    "Statement": "import Data.Complex",
+    "Description": "Import the Data.Complex module."
+    },
+    {
+    "Statement": "(- Simple laws about addition -)",
+    "Description": "Start of the comment 'Simple laws about addition'."
+    },
+    {
+    "Statement": "addSig::\n[Sig]",
+    "Description": "Define 'addSig' as a list of Sig."
+    },
+    {
+    "Statement": "addsig - [\ncon\n((+) :: Int -> Int -> Int),",
+    "Description": "Declare the signature for addition '(+) :: Int -> Int -> Int'."
+    },
+    {
+    "Statement": "con\n\"e\" (0 :: Int)\n]",
+    "Description": "Declare the constant 'e' as '0' of type Int."
+    },
+    {
+    "Statement": "concatMapSig :: [Sig]",
+    "Description": "Define 'concatMapSig' as a list of Sig."
+    },
+    {
+    "Statement": "concatMapSig - [\ncon \"map\" (map :: (a -> b) →› [A] -> (B]),",
+    "Description": "Declare the signature for 'map' function."
+    },
+    {
+    "Statement": "con \"concat\"\n(concat:: [[A]]",
+    "Description": "Declare the signature for 'concat' function."
+    },
+    {
+    "Statement": "con \"concatMap\"\n-> [A]),",
+    "Description": "Declare the signature for 'concatMap' function."
+    },
+    {
+    "Statement": "(concatMap :: (A -> [B]) -> [A] -> [BJ),",
+    "Description": "Define 'concatMap' as a function which takes two arguments of type 'A' and returns a list of 'B'."
+    },
+    {
+    "Statement": "con \"[]\" ([] :: [A]),",
+    "Description": "Declare the constant '[]' as an empty list."
+    },
+    {
+    "Statement": "con \":\" ((:) :: A -> [A] -> [A])",
+    "Description": "Declare the signature for ':' function."
+    },
+    {
+    "Statement": "]",
+    "Description": "End of the list."
+    },
+    {
+    "Statement": "rev::\n[a] -> [a]",
+    "Description": "Define 'rev' as a function which takes a list of 'a' and returns a list of 'a'."
+    },
+    {
+    "Statement": "rev\n[] = []",
+    "Description": "If the list is empty, return an empty list."
+    },
+    {
+    "Statement": "rev\n(x:xs) = rev xs ++ [x]",
+    "Description": "Reverse the list."
+    },
+    {
+    "Statement": "- )",
+    "Description": "End of the comment."
+    },
+    {
+    "Statement": "revAcc :: [a] -> [a]",
+    "Description": "Define 'revAcc' as a function which takes a list of 'a' and returns a list of 'a'."
+    },
+    {
+    "Statement": "revAcc = aux []",
+    "Description": "Define 'revAcc' as an auxiliary function."
+    },
+    {
+    "Statement": "aux acc\n0] = асс",
+    "Description": "If the accumulator is an empty list, return the accumulator."
+    },
+    {
+    "Statement": "aux acc\n(x:xs) = aux (x:acc) xs",
+    "Description": "Otherwise, prepend the current element to the accumulator and continue."
+    },
+    {
+    "Statement": "revSig\n:: [Sigl",
+    "Description": "Define 'revSig' as a list of Sig."
+    },
+    {
+    "Statement": "revSig =\ncon\n\"rev\" (rev :: [A] -> [A]),",
+    "Description": "Declare the signature for 'rev' function."
+    },
+    {
+    "Statement": "con\n\"revAcc\"",
+    "Description": "Declare the signature for 'revAcc' function."
+    },
+    {
+    "Statement": "con\n(revAcc :: [A] -> [A]),",
+    "Description": "Define 'revAcc' as a function which takes a list of 'A' and returns a list of 'A'."
+    },
+    {
+    "Statement": "\"[]\" ([] :: [A])",
+    "Description": "Declare the constant '[]' as an empty list."
+    },
+    {
+    "Statement": "]",
+    "Description": "End of the list."
+    },
+    {
+    "Statement": "sorted :: Ord a => [a] -> Bool",
+    "Description": "Define 'sorted' as a function which takes a list of 'a' and returns a boolean."
+    },
+    {
+    "Statement": "sorted [] = True",
+    "Description": "If the list is empty, return True."
+    },
+    {
+    "Statement": "sorted [x] = True",
+    "Description": "If the list has one element, return True."
+    },
+    {
+    "Statement": "sorted (x:y:xs) = x <= y 8& sorted (y:xs)",
+    "Description": "If the first element is less than or equal to the second element and the rest of the list is sorted, return True."
+    },
+    {
+    "Statement": "sortedSig :: [Sig)",
+    "Description": "Define 'sortedSig' as a list of Sig."
+    },
+    {
+    "Statement": "sortedSig - [\npredicate \"sorted\" (sorted :: [Int] -> Bool),",
+    "Description": "Declare the signature for the 'sorted' function."
+    },
+    {
+    "Statement": "background [\npredicate \"<\" ((<) :: Int -> Int -> Bool),",
+    "Description": "Declare the signature for the '<' function."
+    },
+    {
+    "Statement": "prelude",
+    "Description": "Include the prelude."
+    },
+    {
+    "Statement": "]",
+    "Description": "End of the list."
+    },
+    {
+    "Statement": "con \"fromList\" (fromList :: [Orda] -› Tree Ord),",
+    "Description": "Include the 'fromList' function signature in 'treeSig1'."
+    },
+    {
+    "Statement": "con \"insert\" (insert :: OrdA -› Tree OrdA -> Tree OrdA)",
+    "Description": "Include the 'insert' function signature in 'treeSig1'."
+    },
+    {
+    "Statement": "]",
+    "Description": "End the 'treeSig1' list definition."
+    },
+    {
+    "Statement": "treesig2 :: [Sig)",
+    "Description": "Define 'treesig2' as a list of Sig."
+    },
+    {
+    "Statement": "treesig2 = [",
+    "Description": "Assign the following list of Sig to 'treesig2'."
+    },
+    {
+    "Statement": "monoTypewithvars [\"a\", \"b\", \"c\"] (Proxy :: Proxy OrdA),",
+    "Description": "Include the 'OrdA' type proxy with type variables 'a', 'b', and 'c' in 'treesig2'."
+    },
+    {
+    "Statement": "monoTypeWithVars [\"t\", \"t1\", \"t2\"] (Proxy :: Proxy (Tree OrdA)),",
+    "Description": "Include the type proxy 'Tree OrdA' in 'treesig2' with type variables 't', 't1', and 't2'."
+    },
+    {
+    "Statement": "monoTypeWithVars [\"t\", \"t1\", \"t2\"] (Proxy :: Proxy (Tree Int)),",
+    "Description": "Include the type proxy 'Tree Int' in 'treesig2' with type variables 't', 't1', and 't2'."
+    },
+    {
+    "Statement": "con \"fromist\" (fromlist:: [OrdA] -> Tree OrdA),",
+    "Description": "Include the 'fromlist' function signature in 'treesig2'."
+    },
+    {
+    "Statement": "con \"inorder\" (inorder :: Tree OrdA -> [OrdA]),",
+    "Description": "Include the 'inorder' function signature in 'treesig2'."
+    },
+    {
+    "Statement": "predicate \"sorted\" (sorted :: [OrdA] -> Bool)",
+    "Description": "Include the 'sorted' predicate signature in 'treesig2'."
+    },
+    {
+    "Statement": "]",
+    "Description": "End the 'treesig2' list definition."
+    },
+    {
+    "Statement": "complexSig :: [Sig]",
+    "Description": "Define 'complexSig' as a list of Sig."
+    },
+    {
+    "Statement": "complexSig = [",
+    "Description": "Assign the following list of Sig to 'complexSig'."
+    },
+    {
+    "Statement": "mono TypeObserve (Proxy :: Proxy Float),",
+    "Description": "Include the 'Float' type proxy in 'complexSig'."
+    },
+    {
+    "Statement": "mono Typeobserve (Proxy :: Proxy (Complex Float)),",
+    "Description": "Include the 'Complex Float' type proxy in 'complexSig'."
+    },
+    {
+    "Statement": "con \"realPart\" (realPart :: Complex Float -› Float),",
+    "Description": "Include the 'realPart' function signature in 'complexSig'."
+    },
+    {
+    "Statement": "con \"imagPart\" (imagPart :: Complex Float -> Float),",
+    "Description": "Include the 'imagPart' function signature in 'complexSig'."
+    },
+    {
+    "Statement": "con \":+\" ((:+) :: Float -› Float -> Complex Float),",
+    "Description": "Include the ':+' operator signature in 'complexSig'."
+    },
+    {
+    "Statement": "background [ prelude ]",
+    "Description": "Include the Prelude module in the background."
+    },
+    {
+    "Statement": "]",
+    "Description": "End the 'complexSig' list definition."
+    },
+    {
+    "Statement": "module Main where",
+    "Description": "Define the module 'Main'."
+    },
+    {
+    "Statement": "main :: 10 ()",
+    "Description": "Define the 'main' function."
+    },
+    {
+    "Statement": "main = putstrun \"Hello World!\"",
+    "Description": "Print 'Hello World!' when 'main' is executed."
+    },
+    {
+    "Statement": "module Main whene",
+    "Description": "Define the module 'Main' with a typo in 'where'."
+    },
+    {
+    "Statement": "import qualified Lib",
+    "Description": "Import the 'Lib' module qualified."
+    },
+    {
+    "Statement": "main :: 10 (",
+    "Description": "Define the 'main' function."
+    },
+    {
+    "Statement": "main = Lib.helloworld",
+    "Description": "Call the 'helloworld' function from 'Lib' when 'main' is executed."
+    }
+]
